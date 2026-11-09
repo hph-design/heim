@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="fo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow">
+<title>Heim.fo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
+<style>body{margin:0}img{max-width:100%}
+/* Layout: black club-style header, radial green hero with search, card grid; hash-routed views (forsida / ognir / ogn-id / meklarar) */
+:root{
+  --bg:#F2F5F2; --surface:#FFFFFF; --ink:#161717; --muted:#58635D; --line:#DAE1DC;
+  --green:#369A68; --green-ink:#23704A; --green-soft:#E3F1E9; --red:#D92128; --red-soft:#FBE4E5;
+  --amber:#B7791F; --amber-soft:#FBF0DC;
+  --head:#161717; --head-fg:#FFFFFF; --head-muted:#A9B3AD;
+  --hero-1:#4FBF87; --hero-2:#2A7F55; --hero-3:#161717;
+  --shadow:0 1px 2px rgba(22,23,23,.06),0 6px 18px rgba(22,23,23,.06);
+  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:10px;
+}
+
+
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.01em;line-height:1;margin:0;text-wrap:balance}
+.num{font-variant-numeric:tabular-nums}
+
+/* demo strip + header */
+.demo{background:var(--red);color:#fff;font-size:13px;font-weight:600;letter-spacing:.04em;text-align:center}
+.demo .wrap{padding-block:6px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--head);color:var(--head-fg);border-bottom:4px solid var(--green)}
+header.top .wrap{display:flex;align-items:center;gap:24px;padding-block:12px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:26px;text-transform:uppercase;letter-spacing:.02em}
+.logo svg{flex:none}
+.logo b{color:var(--green)}
+nav.main{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+nav.main a{text-decoration:none;font-family:var(--f-display);font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:.05em;color:var(--head-muted);padding:6px 12px;border-radius:6px}
+nav.main a:hover{color:var(--head-fg)}
+nav.main a[aria-current="page"]{color:var(--head-fg);background:rgba(255,255,255,.08);box-shadow:inset 0 -3px 0 var(--green)}
+
+/* hero */
+.hero{background:radial-gradient(120% 140% at 85% 0%,var(--hero-1) 0%,var(--hero-2) 38%,var(--hero-3) 82%);color:#fff;overflow:hidden;position:relative}
+.hero .wrap{padding-block:56px 40px;position:relative}
+.hero .kicker{font-family:var(--f-display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:15px;color:#BFE8D2}
+.hero h1{font-size:clamp(44px,8vw,92px);font-weight:800;margin-top:10px;max-width:12ch}
+.hero h1 span{color:#BFE8D2}
+.hero p.lead{max-width:56ch;font-size:18px;color:#E3EFE8;margin:18px 0 0}
+.hero .stripes{position:absolute;right:-60px;bottom:-40px;width:420px;height:420px;opacity:.12;pointer-events:none}
+
+.search{margin-top:28px;background:var(--surface);color:var(--ink);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:2fr 1.2fr 1.2fr 1.2fr auto;gap:10px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.field input,.field select{font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:9px 10px;min-width:0;width:100%}
+.btn{font-family:var(--f-display);font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.06em;border:0;border-radius:7px;padding:10px 22px;cursor:pointer;background:var(--green);color:#fff;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:hover{background:var(--green-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:transparent}
+.search .btn{align-self:end;height:42px}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18);margin-top:28px;border-radius:var(--r);overflow:hidden}
+.stats div{background:rgba(10,12,11,.45);padding:14px 18px}
+.stats b{display:block;font-family:var(--f-display);font-size:34px;font-weight:800;line-height:1}
+.stats span{font-size:13px;color:#C9DDD1;text-transform:uppercase;letter-spacing:.08em}
+
+/* sections */
+section.block{padding-block:44px 8px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(30px,4vw,42px);font-weight:800;position:relative;padding-left:16px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:2px;bottom:4px;width:6px;background:var(--green);border-radius:2px}
+.sec-head a{font-weight:600;color:var(--green-ink);text-decoration:none}
+.sec-head a:hover{text-decoration:underline}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:var(--surface);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease;min-width:0}
+.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(22,23,23,.08),0 14px 28px rgba(22,23,23,.12)}
+.card .pic{position:relative;aspect-ratio:16/10;max-width:100%;background:var(--green-soft)}
+.card .pic svg{display:block;width:100%;height:100%}
+.chips{position:absolute;left:10px;top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--surface);color:var(--ink);line-height:1.3}
+.chip.new{background:var(--green);color:#fff}
+.chip.bid{background:var(--red);color:#fff}
+.chip.price{background:var(--amber);color:#fff}
+.chip.sold{background:#161717;color:#fff}
+.chip.open{background:var(--surface);color:var(--green-ink);box-shadow:inset 0 0 0 2px var(--green)}
+.card .body{padding:14px 16px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .addr{font-weight:600;font-size:17px;line-height:1.25}
+.card .town{color:var(--muted);font-size:14px}
+.card .price{font-family:var(--f-display);font-weight:800;font-size:28px;line-height:1;margin-top:4px}
+.card .bidline{font-size:13px;color:var(--red);font-weight:600}
+.facts{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-top:auto;padding-top:8px}
+.facts b{color:var(--ink);font-weight:600}
+.card .src{border-top:1px solid var(--line);padding:9px 16px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.card .src strong{color:var(--ink);font-weight:600}
+
+/* list view */
+.page-head{padding-block:36px 8px}
+.page-head h1{font-size:clamp(40px,6vw,64px);font-weight:800}
+.page-head p{color:var(--muted);margin:8px 0 0;max-width:60ch}
+.listing{display:grid;grid-template-columns:260px 1fr;gap:28px;padding-block:20px 48px;align-items:start}
+.filters{background:var(--surface);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow);position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px)}
+.filters h3{font-size:22px;font-weight:800}
+.agentlist{display:flex;flex-direction:column;gap:6px}
+.agentlist label{display:flex;align-items:center;gap:8px;font-size:15px;cursor:pointer}
+.agentlist input{accent-color:var(--green);width:17px;height:17px}
+.agentlist .cnt{margin-left:auto;color:var(--muted);font-size:13px}
+.results-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.results-bar .count{font-family:var(--f-display);font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:.04em}
+.results-bar .field{flex-direction:row;align-items:center;gap:8px}
+.results-bar select{width:auto}
+.empty{background:var(--surface);border-radius:var(--r);padding:40px 24px;text-align:center;color:var(--muted)}
+.linkbtn{background:none;border:0;color:var(--green-ink);font:inherit;font-weight:600;cursor:pointer;padding:0;text-align:left}
+.linkbtn:hover{text-decoration:underline}
+
+/* detail */
+.back{display:inline-block;margin-top:24px;color:var(--green-ink);font-weight:600;text-decoration:none}
+.back:hover{text-decoration:underline}
+.detail{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;padding-block:16px 40px;align-items:start}
+.detail .hero-pic{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;max-width:100%;position:relative;box-shadow:var(--shadow)}
+.detail .hero-pic svg{display:block;width:100%;height:100%}
+.detail h1{font-size:clamp(36px,5vw,56px);font-weight:800;margin-top:20px}
+.detail .town{color:var(--muted);font-size:18px;margin-top:6px}
+.factgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:var(--r);overflow:hidden;margin-top:22px}
+.factgrid div{background:var(--surface);padding:14px 16px}
+.factgrid span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.factgrid b{font-family:var(--f-display);font-size:26px;font-weight:700}
+.side{display:flex;flex-direction:column;gap:16px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px)}
+.pricebox{background:var(--head);color:var(--head-fg);border-radius:var(--r);padding:20px;border-top:5px solid var(--green)}
+.pricebox .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--head-muted);font-weight:600}
+.pricebox .big{font-family:var(--f-display);font-size:44px;font-weight:800;line-height:1.05}
+.pricebox .bid{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.15)}
+.pricebox .bid b{font-family:var(--f-display);font-size:28px;color:#FF7A7F}
+.pricebox .bid small{display:block;color:var(--head-muted);font-size:14px}
+.pricebox .open{margin-top:14px;padding:10px 12px;background:rgba(75,182,128,.16);border-radius:7px;font-size:15px}
+.agentbox{background:var(--surface);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+.agentbox .who{display:flex;align-items:center;gap:12px}
+.mono{width:46px;height:46px;border-radius:8px;background:var(--green-soft);color:var(--green-ink);display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:20px;flex:none}
+.agentbox .who b{display:block;font-size:17px}
+.agentbox .who span{font-size:14px;color:var(--muted)}
+.agentbox p{margin:0;font-size:14px;color:var(--muted)}
+.agentbox .btn{width:100%}
+
+/* pitch */
+.pitch-hero .wrap{padding-block:56px 48px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--surface);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.step .n{font-family:var(--f-display);font-weight:800;font-size:48px;color:var(--green);line-height:1}
+.step h3{font-size:24px;font-weight:800;margin-top:8px}
+.step p{color:var(--muted);margin:8px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.checks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start;background:var(--surface);padding:14px 16px;border-radius:var(--r)}
+.checks li svg{flex:none;margin-top:2px}
+.checks b{display:block}
+.checks span{color:var(--muted);font-size:15px}
+.code{background:var(--head);color:#DDE7E1;border-radius:var(--r);padding:18px;overflow-x:auto;font:13px/1.6 ui-monospace,"Cascadia Mono",Consolas,monospace;margin:0}
+.code .k{color:#7FD3A6}.code .s{color:#FFB3B6}.code .c{color:#7E8A84}
+.contact{background:var(--green);color:#fff;border-radius:var(--r);padding:28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-block:44px 56px}
+.contact h2{font-size:clamp(28px,4vw,40px);font-weight:800}
+.contact p{margin:6px 0 0;color:#E3F4EA}
+.contact .who{font-family:var(--f-display);font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+
+footer{background:var(--head);color:var(--head-muted);font-size:14px;margin-top:40px}
+footer .wrap{padding-block:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--head-fg);font-family:var(--f-display);text-transform:uppercase;letter-spacing:.04em;font-size:18px}
+
+@media (max-width:900px){
+  .search{grid-template-columns:1fr 1fr}
+  .search .field:first-child{grid-column:1/-1}
+  .search .btn{grid-column:1/-1}
+  .listing,.detail,.two{grid-template-columns:1fr}
+  .filters,.side{position:static}
+  .steps{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .stats b{font-size:26px}
+  .stats div{padding:12px}
+  .factgrid{grid-template-columns:repeat(2,1fr)}
+  header.top .wrap{gap:8px}
+  nav.main{margin-left:0;width:100%}
+  nav.main a{font-size:15px;padding:4px 8px}
+}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+
+.card .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
+.card .pic .noimg{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.08em;background:repeating-linear-gradient(135deg,var(--green-soft) 0 12px,var(--surface) 12px 24px)}
+.card .chips{z-index:2}
+.card.is-sold .pic img{filter:grayscale(.85);opacity:.8}
+.card .bidline.muted{color:var(--muted);font-weight:500}
+.noprice{font-size:20px;color:var(--muted)}
+.card .src{color:var(--green-ink);font-weight:600}
+.card .src strong{color:inherit}
+.card:hover .src{background:var(--green-soft)}
+.ext{font-size:16px}
+.card .price{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.sqm{font-family:var(--f-body);font-size:14px;font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0}
+
+.areastat{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--head);color:var(--head-fg);border-radius:var(--r);border-left:6px solid var(--green);padding:18px 22px;margin-bottom:18px}
+.areastat .lbl{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--head-muted);font-weight:600}
+.areastat b{font-family:var(--f-display);font-size:40px;font-weight:800;line-height:1.05}
+.areastat small{display:block;color:var(--head-muted);font-size:13px}
+.areastat .cmp{display:flex;align-items:center;gap:10px}
+.areastat .cmp b{font-size:30px}
+.areastat .cmp.up b{color:#FF7A7F}.areastat .cmp.down b{color:#7FD3A6}
+.areastat .cmp span{font-size:13px;color:var(--head-muted);line-height:1.35}
+
+.monthly{font-size:13px;color:var(--muted);font-weight:500}
+.loanhint{margin:0 0 14px;font-size:14px;color:var(--muted)}
+.loanhint a{color:var(--green-ink);font-weight:600}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px;padding-block:20px 48px;align-items:start}
+.calcform{position:static}
+.calcform small{font-size:13px;color:var(--muted)}
+.calcform input[type=range]{accent-color:var(--green);width:100%}
+.unit{display:flex;align-items:center;gap:8px}
+.unit input{flex:1;font-size:18px!important;font-weight:600;font-variant-numeric:tabular-nums}
+.unit span{color:var(--muted)}
+.calcout{display:flex;flex-direction:column;gap:14px;min-width:0}
+.calcout .pricebox .big{font-size:52px}
+.calcout .sub{color:var(--head-muted);font-size:14px;margin-top:6px}
+.rows{margin:0;background:var(--surface);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.rows div{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line)}
+.rows div:last-child{border-bottom:0}
+.rows dt{color:var(--muted)}.rows dd{margin:0;font-weight:600}
+.rows .tot{background:var(--green-soft)}.rows .tot dt,.rows .tot dd{color:var(--ink);font-weight:700}
+.warn{margin:0;padding:12px 16px;border-radius:var(--r);background:var(--amber-soft);color:var(--ink);font-size:14px}
+.note{margin:0;font-size:13px;color:var(--muted)}
+@media (max-width:900px){.calc{grid-template-columns:1fr}}
+
+/* ---- Lysere udgave ---- */
+:root{--bg:#F6F9F7;--head:#FFFFFF;--head-fg:#161717;--head-muted:#5B6560;--soft2:#EAF5EF;color-scheme:light}
+body::before{background:#FFFFFF}
+header.top{border-bottom:3px solid var(--green);box-shadow:0 1px 0 var(--line)}
+nav.main a{color:#5B6560}
+nav.main a:hover{color:#161717}
+nav.main a[aria-current="page"]{background:var(--green-soft);color:var(--green-ink);box-shadow:none}
+.logo svg path:nth-of-type(2){stroke:#161717}
+.demo{background:var(--green-soft)!important;color:var(--green-ink)}
+.hero{background:linear-gradient(160deg,#E6F4EC 0%,#F6F9F7 70%);color:var(--ink)}
+.hero .kicker{color:var(--green-ink)}
+.hero h1 span{color:var(--green)}
+.hero p.lead{color:#3E4843}
+.hero .stripes{opacity:.08}
+.hero .stripes path{stroke:var(--green)}
+.search{box-shadow:0 8px 24px rgba(35,112,74,.12);border:1px solid var(--line)}
+.stats{background:var(--line)}
+.stats div{background:#FFFFFF}
+.stats b{color:var(--green-ink)}
+.stats span{color:var(--muted)}
+.pricebox{background:#FFFFFF;color:var(--ink);box-shadow:var(--shadow);border-top-color:var(--green)}
+.pricebox .lbl,.calcout .sub{color:var(--muted)}
+.pricebox .big{color:var(--green-ink)}
+.areastat{background:#FFFFFF;color:var(--ink);box-shadow:var(--shadow)}
+.areastat .lbl,.areastat small,.areastat .cmp span{color:var(--muted)}
+.areastat b{color:var(--green-ink)}
+.areastat .cmp.up b{color:var(--red)}.areastat .cmp.down b{color:var(--green)}
+footer{background:#EAF2ED;color:var(--muted)}
+footer b{color:var(--ink)}
+
+/* ---- Orange ---- */
+:root{--green:#D9661F;--green-ink:#A3470C;--green-soft:#FCEDE1;--bg:#FBF8F5;--amber:#3E4A5C}
+.hero{background:linear-gradient(160deg,#FBE3CF 0%,#FBF8F5 70%)}
+.search{box-shadow:0 8px 24px rgba(163,71,12,.12)}
+footer{background:#F6ECE3}
+
+.srcl{display:flex;align-items:center;gap:8px}
+.alogo{height:20px;width:auto;max-width:90px;display:block;color:#161717}
+.flogo{height:18px;width:auto;max-width:90px;display:block}
+.agentlist label{min-height:28px}
+.agents{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.agentcard{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;cursor:pointer;text-align:left;box-shadow:var(--shadow);transition:border-color .15s,transform .15s}
+.agentcard:hover{border-color:var(--green);transform:translateY(-2px)}
+.blogo{height:38px;width:auto;max-width:150px;display:block}
+.agentcard span{font-size:15px;color:var(--muted)}
+.agentcard b{color:var(--ink);font-size:18px}
+.agentcard .go{color:var(--green-ink);font-weight:600;font-size:14px}
+@media (max-width:900px){.agents{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.age{font-size:13px;color:var(--muted)}
+.chip.today{background:var(--green);color:#fff}
+.bidline.down{color:#1E7A4C}.bidline.up{color:var(--red)}
+
+/* friskleiki */
+.card.fresh0{box-shadow:0 0 0 3px var(--green),0 10px 26px rgba(163,71,12,.18)}
+.card.fresh1{box-shadow:0 0 0 2px var(--green),var(--shadow)}
+.card.hasbid{box-shadow:0 0 0 3px var(--red),0 10px 26px rgba(217,33,40,.16)}
+.chip.today.soft{background:var(--green-soft);color:var(--green-ink)}
+.chip.visit{background:var(--ink);color:#fff}
+.chip.bidnew{background:var(--red);color:#fff;animation:pulse 1.6s ease-in-out 3}
+@keyframes pulse{50%{transform:scale(1.08)}}
+.was{color:var(--muted);font-weight:500}
+.grid.featured>.card:first-child{grid-column:span 2}
+.grid.featured>.card:first-child .pic{aspect-ratio:16/8}
+.grid.featured>.card:first-child .price{font-size:34px}
+@media (max-width:620px){.grid.featured>.card:first-child{grid-column:auto}.grid.featured>.card:first-child .pic{aspect-ratio:16/10}}
+.alerts{display:flex;gap:12px;flex-wrap:wrap;padding-top:28px}
+.alert{font:inherit;font-size:16px;font-weight:600;border:0;border-radius:var(--r);padding:12px 18px;cursor:pointer;background:var(--ink);color:#fff}
+.alert b{font-family:var(--f-display);font-size:22px;margin-right:4px}
+.alert.bid{background:var(--red)}
+.alert:hover{opacity:.9}
+@media (prefers-reduced-motion:reduce){.chip.bidnew{animation:none}}
+
+/* kompakt hero, so tað nýggjasta sæst skjótt */
+.hero .wrap{padding-block:32px 28px}
+.hero h1{font-size:clamp(34px,5vw,58px);max-width:none}
+.hero p.lead{margin-top:10px;font-size:17px}
+.search{margin-top:20px}
+.stats{margin-top:18px}
+.stats b{font-size:28px}
+.alerts{padding-top:22px}
+
+/* ---- Loyniorð ---- */
+html.locked body>*:not(#gate){display:none!important}
+#gate{display:none}
+html.locked #gate{display:grid;place-items:center;min-height:100vh;padding:24px 16px;background:linear-gradient(160deg,#FBE3CF 0%,#FBF8F5 70%)}
+.gatebox{width:100%;max-width:380px;background:#fff;border:1px solid var(--line);border-top:5px solid var(--green);border-radius:var(--r);box-shadow:0 8px 24px rgba(163,71,12,.12);padding:28px 24px;display:flex;flex-direction:column;gap:14px}
+.gatebox .logo{color:var(--ink)}
+.gatebox p{margin:0;color:var(--muted);font-size:15px}
+.gatebox input{font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink);width:100%}
+.gatebox .err{color:var(--red);font-size:14px;font-weight:600;min-height:1.2em}
+</style>
+<script>try{if(sessionStorage.getItem("heimfo_ok")!=="1")document.documentElement.classList.add("locked")}catch(e){document.documentElement.classList.add("locked")}</script>
+</head>
+<body>
+<div id="gate"><form class="gatebox" id="gateform">
+  <span class="logo"><svg width="34" height="30" viewBox="0 0 34 30" aria-hidden="true"><path d="M2 15 17 3l15 12" fill="none" stroke="#D9661F" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M8 17v11h18V17" fill="none" stroke="#161717" stroke-width="3.5" stroke-linejoin="round"/><rect x="14.5" y="20" width="5" height="8" fill="#D92128"/></svg><span>Heim<b>.fo</b></span></span>
+  <p>Royndarútgáva. Skriva loyniorðið fyri at síggja síðuna.</p>
+  <input type="password" id="gatepw" autocomplete="current-password" aria-label="Loyniorð" placeholder="Loyniorð" required autofocus>
+  <button class="btn" type="submit" id="gatebtn">Lat upp</button>
+  <div class="err" id="gateerr" role="alert"></div>
+</form></div>
+<div class="demo" style="background:var(--green-ink)"><div class="wrap">Persónligt yvirlit · Dagført 7. nov. 2026 · 115 ognir frá 4 meklarum</div></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#forsida" aria-label="Heim.fo, forsíða">
+      <svg width="34" height="30" viewBox="0 0 34 30" aria-hidden="true"><path d="M2 15 17 3l15 12" fill="none" stroke="#D9661F" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M8 17v11h18V17" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round"/><rect x="14.5" y="20" width="5" height="8" fill="#D92128"/></svg>
+      <span>Heim<b>.fo</b></span>
+    </a>
+    <nav class="main" aria-label="Høvuðsvalmynd">
+      <a href="#forsida" data-nav="forsida">Forsíða</a>
+      <a href="#ognir" data-nav="ognir">Allar ognir</a>
+      <a href="#roknari" data-nav="roknari">Lánsroknari</a>
+    </nav>
+  </div>
+</header>
+<main id="app"></main>
+<footer>
+  <div class="wrap">
+    <div><b>Heim.fo</b><br>HPH Designa</div>
+    <div>Upplýsingar og myndir koma frá Meklarin, Betri Heim, Skyn og Ogn.fo.<br>Myndirnar verða vístar beinleiðis frá heimasíðum teirra.</div>
+  </div>
+</footer>
+<script>
+const AGENTS = {
+  meklarin: {name:"Meklarin",  kind:"Meklari",   logo:"https://www.meklarin.fo/wp-content/themes/lunnar-meklarin/images/logo.svg", home:"https://www.meklarin.fo/"},
+  betriheim:{name:"Betri Heim",kind:"Meklari",   logo:"https://www.betriheim.fo/images/logo.svg", home:"https://www.betriheim.fo/"},
+  skyn:     {name:"Skyn",      kind:"Meklari",   logo:"https://www.skyn.fo/Files/Templates/Designs/Skyn2026/img/skyn-logo.svg", home:"https://www.skyn.fo/"},
+  ogn:      {name:"Ogn.fo",    kind:"Advokatar", logo:"https://ogn.fo/site/templates/default/assets/images/logo.svg", home:"https://ogn.fo/"}
+};
+const L = [{"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/heygatun-5/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/11/a-1-800x450.jpg", "type": "Sethús", "address": "Heygatún 5", "town": "Vestmanna", "area": "Norðstreymoy", "price": 2295000, "bid": null, "bidText": "", "expired": false, "built": "1750 (2021-2024)", "size": 117, "plot": 111, "rooms": "2", "floors": null, "status": "new", "open": "11. nov. kl. 15:00", "rank": 0, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 1}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/millum-gilja-133/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/01-800x450.jpg", "type": "Sethús", "address": "Millum Gilja 133", "town": "Hoyvík", "area": "Suðurstreymoy", "price": 5495000, "bid": null, "bidText": "", "expired": false, "built": "1988", "size": 212, "plot": 500, "rooms": "4", "floors": null, "status": "price", "open": "", "rank": 1, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 2}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/gardavegur-26/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a-1-6-800x450.jpg", "type": "Sethús", "address": "Garðavegur 26", "town": "Skopun", "area": "Sandoy", "price": 995000, "bid": null, "bidText": "", "expired": false, "built": "1906", "size": 144, "plot": 204, "rooms": "3", "floors": null, "status": "new", "open": "", "rank": 2, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 3}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/haraldstrod-10-torshavn/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a-1-5-800x450.jpg", "type": "Sethús", "address": "Haraldstrøð 10", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 5995000, "bid": null, "bidText": "", "expired": false, "built": "1970", "size": 228, "plot": 400, "rooms": "4", "floors": null, "status": "new", "open": "", "rank": 3, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 4}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/niels-finsens-gota-47-torshavn/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/e-800x450.jpg", "type": "Tvíhús", "address": "Niels Finsens gøta 47", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 5000000, "bid": null, "bidText": "", "expired": false, "built": "1914", "size": 120, "plot": 86, "rooms": "3", "floors": null, "status": "new", "open": "", "rank": 4, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 5}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/bakkavegur-41/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a01-5-800x450.jpg", "type": "Vinnubygningur", "address": "Bakkavegur 41", "town": "Vestmanna", "area": "Norðstreymoy", "price": 4500000, "bid": null, "bidText": "", "expired": false, "built": "Uml. 1900", "size": 400, "plot": 277, "rooms": null, "floors": null, "status": "new", "open": "", "rank": 5, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 6}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/ingibjargargota-4a/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a01-4-800x450.jpg", "type": "Íbúð", "address": "Ingibjargargøta 4A", "town": "Hoyvík", "area": "Suðurstreymoy", "price": 4200000, "bid": null, "bidText": "", "expired": false, "built": "2021", "size": 92, "plot": 439, "rooms": "3", "floors": null, "status": "new", "open": "", "rank": 6, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 7}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/argjabodagota-24-argir/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/dji_fly_20261016_122536_931_1792150144806_photo-800x450.jpg", "type": "Sethús", "address": "Argjaboðagøta 24", "town": "Argir", "area": "Suðurstreymoy", "price": 4195000, "bid": null, "bidText": "", "expired": false, "built": "1968", "size": 220, "plot": 237, "rooms": "3", "floors": null, "status": "new", "open": "", "rank": 7, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 8}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/sjogota-24/", "img": "https://www.meklarin.fo/wp-content/uploads/2025/11/a01-2-800x450.jpg", "type": "Sethús", "address": "Sjógøta 24", "town": "Tvøroyri", "area": "Suðuroy", "price": 1800000, "bid": null, "bidText": "", "expired": false, "built": "1968", "size": 270, "plot": 242, "rooms": "5", "floors": null, "status": "price", "open": "", "rank": 8, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 9}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/ingibjargargota-6a/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a-1-4-800x450.jpg", "type": "Íbúð", "address": "Ingibjargargøta 6A", "town": "Hoyvík", "area": "Suðurstreymoy", "price": 4100000, "bid": null, "bidText": "", "expired": false, "built": "2018", "size": 83, "plot": null, "rooms": "2", "floors": null, "status": "new", "open": "", "rank": 9, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 10}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/leitisvegur-70d-saltangara/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/01-3-800x450.jpg", "type": "Íbúð", "address": "Leitisvegur 70D", "town": "Saltangará", "area": "Eysturoy", "price": 3595000, "bid": null, "bidText": "", "expired": false, "built": "2026", "size": 89, "plot": null, "rooms": "2", "floors": null, "status": "new", "open": "", "rank": 10, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 11}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/eystan-heyg-17-2/", "img": "https://www.meklarin.fo/wp-content/uploads/2025/08/01-3-800x450.jpg", "type": "Sethús", "address": "Eystan Heyg 17", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 5950000, "bid": null, "bidText": "", "expired": false, "built": "1970", "size": 257, "plot": 344, "rooms": "5", "floors": null, "status": "new", "open": "", "rank": 11, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 12}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/mannbrekka-8/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a01-1-800x450.jpg", "type": "Sethús", "address": "Mannbrekka", "town": "Hoyvík", "area": "Suðurstreymoy", "price": 8000000, "bid": null, "bidText": "", "expired": false, "built": "1975", "size": 339, "plot": 1012, "rooms": "9", "floors": null, "status": "new", "open": "", "rank": 12, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 13}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/undir-kongavarda-23/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/09/01-800x450.jpg", "type": "Íbúð", "address": "undir Kongavarða 23 1hm", "town": "Argir", "area": "Suðurstreymoy", "price": 3900000, "bid": 3600000, "bidText": "", "expired": true, "built": "2009", "size": 83, "plot": null, "rooms": "1 (2)", "floors": null, "status": "", "open": "", "rank": 13, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 14}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/vid-myllutjorn-22/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/01-2-800x450.jpg", "type": "Sethús", "address": "við Myllutjørn 22", "town": "Hoyvík", "area": "Suðurstreymoy", "price": 4995000, "bid": null, "bidText": "", "expired": false, "built": "2014", "size": 110, "plot": 213, "rooms": "4", "floors": null, "status": "", "open": "", "rank": 14, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 15}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/grasteinsgota-4/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/04/01a-4-800x573.jpg", "type": "Sethús", "address": "Grásteinsgøta 4", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 4495000, "bid": 3900000, "bidText": "", "expired": true, "built": "1946-47", "size": 192, "plot": 835, "rooms": "7", "floors": null, "status": "", "open": "", "rank": 15, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 16}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/streymnesvegur/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a01-2-800x450.jpg", "type": "Frítíðarogn", "address": "Streymnesvegur", "town": "Streymnes", "area": "Norðstreymoy", "price": 600000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 10520, "rooms": null, "floors": null, "status": "", "open": "", "rank": 16, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 17}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/misavegur-2/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/a01-800x450.jpg", "type": "Sethús", "address": "Misávegur 2", "town": "Vágur", "area": "Suðuroy", "price": 2200000, "bid": null, "bidText": "", "expired": false, "built": "2000 / 2010 / 2025", "size": 216, "plot": 409, "rooms": "4", "floors": null, "status": "", "open": "", "rank": 17, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 18}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/velbastadvegur-35-torshavn/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/08/a-1-6-800x450.jpg", "type": "Sethús", "address": "Velbastaðvegur 35", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 3995000, "bid": null, "bidText": "", "expired": false, "built": "1956", "size": 129, "plot": 347, "rooms": "4", "floors": null, "status": "", "open": "", "rank": 18, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 19}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/jord-matr-nr-402d-og-402c-kvivik/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/09/Kortal-1-800x539.jpg", "type": "Jørð", "address": "matr.nr. 402c og 402d", "town": "Kvívík", "area": "Norðstreymoy", "price": 5000000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 40050, "rooms": null, "floors": null, "status": "", "open": "", "rank": 19, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 20}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/i-leivsgardi-6/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/07/a01-3-800x450.jpg", "type": "Frítíðarogn", "address": "Í Leivsgarði 6", "town": "Hov", "area": "Suðuroy", "price": 975000, "bid": null, "bidText": "", "expired": false, "built": "1937", "size": 127, "plot": 1125, "rooms": "2", "floors": null, "status": "", "open": "", "rank": 20, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 21}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/inni-a-stod-5-jatnavegur-30/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/07/a01-1-800x450.jpg", "type": "Íbúð", "address": "Inni á Støð 5 – Jatnavegur 30", "town": "Miðvágur", "area": "Vágar", "price": 5500000, "bid": null, "bidText": "", "expired": false, "built": "2008", "size": 280, "plot": 224, "rooms": "3", "floors": null, "status": "", "open": "", "rank": 21, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 22}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/heygavegur-41/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/08/a01-3-800x450.jpg", "type": "Frítíðarogn", "address": "Heygavegur 41", "town": "Porkeri", "area": "Suðuroy", "price": 750000, "bid": null, "bidText": "", "expired": false, "built": "Uml. 1950", "size": 110, "plot": 198, "rooms": "3", "floors": null, "status": "", "open": "", "rank": 22, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 23}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/i-stodni-5-nes/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/08/a01-1-800x450.jpg", "type": "Sethús", "address": "Í Støðni 5, Nes", "town": "Hvalba", "area": "Suðuroy", "price": 975000, "bid": null, "bidText": "", "expired": false, "built": "1952", "size": 146, "plot": 659, "rooms": "4", "floors": null, "status": "", "open": "", "rank": 23, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 24}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/i-sydrutoftum-46/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/06/a-1-4-800x450.jpg", "type": "Sethús", "address": "Í Syðrutoftum 46", "town": "Trongisvágur", "area": "Suðuroy", "price": 1645000, "bid": null, "bidText": "", "expired": false, "built": "1880'inum", "size": 109, "plot": 205, "rooms": "3", "floors": null, "status": "", "open": "", "rank": 24, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 25}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/hvammavegur-20/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/07/a01-2-800x450.jpg", "type": "Frítíðarogn", "address": "Hvammavegur 20", "town": "Trongisvágur", "area": "Suðuroy", "price": 2475000, "bid": null, "bidText": "", "expired": false, "built": "1960-80", "size": 200, "plot": 1733, "rooms": "4", "floors": null, "status": "", "open": "", "rank": 25, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 26}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/a-holmanum-3/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/07/01-5-800x450.jpg", "type": "Samanbygd hús", "address": "á Hólmanum 3", "town": "Miðvágur", "area": "Vágar", "price": 1695000, "bid": null, "bidText": "", "expired": false, "built": "1950'ini", "size": 120, "plot": 289, "rooms": "4", "floors": null, "status": "", "open": "", "rank": 26, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 27}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/millum-gardarnar-6/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/06/01-11-800x450.jpg", "type": "Sethús", "address": "Millum Garðarnar 6", "town": "Kunoy", "area": "Norðoyggjar", "price": 3995000, "bid": null, "bidText": "", "expired": false, "built": "2022", "size": 100, "plot": 583, "rooms": "2", "floors": null, "status": "", "open": "", "rank": 27, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 28}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/leynarvegur-24/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/06/a01-3-800x450.jpg", "type": "Jørð", "address": "Leynarvegur 24", "town": "Leynar", "area": "Norðstreymoy", "price": 6000000, "bid": null, "bidText": "", "expired": false, "built": "1930", "size": 155, "plot": 34600, "rooms": "3 / 4", "floors": null, "status": "", "open": "", "rank": 28, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 29}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/norduri-a-heyggi-2a/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/06/01-6-800x450.jpg", "type": "Grundstykki", "address": "Norðuri á Heyggi 2A", "town": "Velbastaður", "area": "Suðurstreymoy", "price": 695000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 568, "rooms": null, "floors": null, "status": "", "open": "", "rank": 29, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 30}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/undir-graasteini-7b/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/03/01-3-800x450.jpg", "type": "Grundstykki", "address": "undir Gráasteini 7B", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 2900000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 499, "rooms": null, "floors": null, "status": "", "open": "", "rank": 30, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 31}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/matr-nr-62a/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/02/a01-1-800x430.jpg", "type": "Jørð", "address": "Matr.nr. 62a Froðba", "town": "Froðba", "area": "Suðuroy", "price": 1000000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 24048, "rooms": null, "floors": null, "status": "", "open": "", "rank": 31, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 32}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/792a-b-c-d-e-f/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/02/a01-800x435.jpg", "type": "Grundstykki", "address": "Matr.nr. 793a-b-c-d-e-f Froðba", "town": "Froðba", "area": "Suðuroy", "price": 400000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 8204, "rooms": null, "floors": null, "status": "", "open": "", "rank": 32, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 33}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/trappugota-1/", "img": "https://www.meklarin.fo/wp-content/uploads/2025/05/DJI_0194-800x533.jpg", "type": "Vinnubygningur", "address": "Trappugøta 1", "town": "Tórshavn", "area": "Suðurstreymoy", "price": null, "bid": null, "bidText": "", "expired": false, "built": "1950'ini", "size": 374, "plot": 197, "rooms": "4", "floors": null, "status": "", "open": "", "rank": 33, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 34}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/kirkjubrekkan-4/", "img": "https://www.meklarin.fo/wp-content/uploads/2025/10/a01-1-800x450.jpg", "type": "Frítíðarogn", "address": "Kirkjubrekkan 4", "town": "Tvøroyri", "area": "Suðuroy", "price": 500000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 484, "rooms": "2", "floors": null, "status": "", "open": "", "rank": 34, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 35}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/mainiflota-14-eidi/", "img": "https://www.meklarin.fo/wp-content/uploads/2024/01/a01-3-800x450.jpg", "type": "Grundstykki", "address": "Mainifløta 14", "town": "Eiði", "area": "Eysturoy", "price": 295000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 596, "rooms": null, "floors": null, "status": "", "open": "", "rank": 35, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 36}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/valarabrekkan-3/", "img": "https://www.meklarin.fo/wp-content/uploads/2022/05/a01-3-scaled-2-800x450.jpg", "type": "Handil", "address": "Valabrekkan 3", "town": "Tvøroyri", "area": "Suðuroy", "price": 1200000, "bid": null, "bidText": "", "expired": false, "built": null, "size": 296, "plot": 180, "rooms": null, "floors": null, "status": "", "open": "", "rank": 36, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 37}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/vid-skalaveg-hvalba-matr-nr-396/", "img": "https://www.meklarin.fo/wp-content/uploads/2023/06/a01-1-800x450.jpg", "type": "Jørð", "address": "við Skálaveg", "town": "Hvalba", "area": "Suðuroy", "price": 250000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 10043, "rooms": null, "floors": null, "status": "", "open": "", "rank": 37, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 38}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/trod-matr-nr-811/", "img": "https://www.meklarin.fo/wp-content/uploads/2023/08/01-1-800x450.jpg", "type": "Jørð", "address": "Trøð - matr.nr. 811", "town": "Froðba", "area": "Suðuroy", "price": 590000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 5439, "rooms": null, "floors": null, "status": "", "open": "", "rank": 38, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 39}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/heidastubbi-8/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/10/01-1-800x475.jpg", "type": "Sethús", "address": "Heiðastubbi 8", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 6750000, "bid": null, "bidText": "", "expired": false, "built": "1970", "size": 262, "plot": 504, "rooms": "6", "floors": null, "status": "sold", "open": "", "rank": 39, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 40}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/stoksoyrarvegur-81/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/09/01-2-800x450.jpg", "type": "Sethús", "address": "Stoksoyrarvegur 81", "town": "Klaksvík", "area": "Norðoyggjar", "price": 2495000, "bid": null, "bidText": "", "expired": false, "built": "1960", "size": 204, "plot": 363, "rooms": "3", "floors": null, "status": "sold", "open": "", "rank": 40, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 41}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/skalavegur-198/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/08/a-1-4-800x450.jpg", "type": "Sethús", "address": "Skálavegur 198", "town": "Skála", "area": "Eysturoy", "price": 2095000, "bid": null, "bidText": "", "expired": false, "built": "1932 uml.", "size": 219, "plot": 758, "rooms": "4", "floors": null, "status": "sold", "open": "", "rank": 41, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 42}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/meinhartstrod-6/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/07/01-3-800x450.jpg", "type": "Sethús", "address": "Meinhartstrøð 6", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 6900000, "bid": null, "bidText": "", "expired": false, "built": "2017", "size": 217, "plot": 500, "rooms": "3", "floors": null, "status": "sold", "open": "", "rank": 42, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 43}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/i-lagni-10/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/03/IMG_1389-800x450.jpeg", "type": "Grundstykki", "address": "Í Lágni 10", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 2395000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 508, "rooms": null, "floors": null, "status": "sold", "open": "", "rank": 43, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 44}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/birnugota-31/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/06/a-1-3-800x450.jpg", "type": "Sethús", "address": "Birnugøta 31", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 5495000, "bid": null, "bidText": "", "expired": false, "built": "1977", "size": 257, "plot": 565, "rooms": "7/8", "floors": null, "status": "sold", "open": "", "rank": 44, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 45}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/neyst-matr-nr-487/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/08/a01-4-800x450.jpg", "type": "Neyst", "address": "Neyst, matr.nr. 487", "town": "Skála", "area": "Eysturoy", "price": 200000, "bid": null, "bidText": "", "expired": false, "built": "Uml. 1940", "size": 55, "plot": 29, "rooms": null, "floors": null, "status": "sold", "open": "", "rank": 45, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 46}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/skulavegur-20/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/07/a01-800x450.jpg", "type": "Íbúð", "address": "Skúlavegur 20", "town": "Klaksvík", "area": "Norðoyggjar", "price": 4750000, "bid": null, "bidText": "", "expired": false, "built": "1930'ini / 1980'ini", "size": 247, "plot": 266, "rooms": "6", "floors": null, "status": "sold", "open": "", "rank": 46, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 47}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/leitisvegur-70e/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/09/01-1-800x450.jpg", "type": "Íbúð", "address": "Leitisvegur 70E", "town": "Saltangará", "area": "Eysturoy", "price": 3395000, "bid": null, "bidText": "", "expired": false, "built": "2026", "size": 84, "plot": null, "rooms": "2", "floors": null, "status": "sold", "open": "", "rank": 47, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 48}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/i-lidini-7/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/09/a-1-800x450.jpg", "type": "Sethús", "address": "í Líðini 7", "town": "Kollafjørður", "area": "Norðstreymoy", "price": 2890000, "bid": null, "bidText": "", "expired": false, "built": "1957", "size": 188, "plot": 316, "rooms": "3", "floors": null, "status": "sold", "open": "", "rank": 48, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 49}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/landavegur-94a-3-2/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/08/01a-1-800x450.jpg", "type": "Íbúð", "address": "Landavegur 94A 3.2", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 5495000, "bid": null, "bidText": "", "expired": false, "built": "2022", "size": 97, "plot": null, "rooms": "2/3", "floors": null, "status": "sold", "open": "", "rank": 49, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 50}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/geilin-85-2/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/09/a01-1-800x450.jpg", "type": "Sethús", "address": "Geilin 85", "town": "Vágur", "area": "Suðuroy", "price": 1500000, "bid": null, "bidText": "", "expired": false, "built": "1987", "size": 216, "plot": null, "rooms": "4", "floors": null, "status": "sold", "open": "", "rank": 50, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 51}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/vegurin-langi-2/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/05/01-800x450.jpg", "type": "Sethús", "address": "Vegurin Langi 2", "town": "Hoyvík", "area": "Suðurstreymoy", "price": 4600000, "bid": null, "bidText": "", "expired": false, "built": "1963", "size": 141, "plot": 2117, "rooms": "4", "floors": null, "status": "sold", "open": "", "rank": 51, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 52}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/karlamagnusarbreyt-7b-3-3/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/08/a-1-800x450.jpg", "type": "Íbúð", "address": "Karlamagnusarbreyt 7B 3.3", "town": "Hoyvík", "area": "Suðurstreymoy", "price": 3645000, "bid": null, "bidText": "", "expired": false, "built": "2019", "size": 72, "plot": null, "rooms": "2", "floors": null, "status": "sold", "open": "", "rank": 52, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 53}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/sundsvegur-18d/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/06/20260715_144309435_iOS-800x450.jpg", "type": "Íbúð", "address": "Sundsvegur 18D", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 3695000, "bid": null, "bidText": "", "expired": false, "built": "2023", "size": 62, "plot": null, "rooms": "2", "floors": null, "status": "sold", "open": "", "rank": 53, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 54}, {"agent": "meklarin", "url": "https://www.meklarin.fo/ogn/reynsgota-39-argir/", "img": "https://www.meklarin.fo/wp-content/uploads/2026/09/a-1-3-800x450.jpg", "type": "Sethús", "address": "Reynsgøta 39", "town": "Argir", "area": "Suðurstreymoy", "price": 5995000, "bid": null, "bidText": "", "expired": false, "built": "1986", "size": 323, "plot": 567, "rooms": "5", "floors": null, "status": "sold", "open": "", "rank": 54, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 55}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/ingibjargargoeta-4e-15-hoyvik", "img": "https://betriheim.cdn.fo/savn/u5mlvl1i/24.jpg?width=400&height=233&rmode=max&quality=50&t=81491&s=AQdjCwI_RvsJexIzNJtxUEKYj8s", "type": "Sethús", "address": "Ingibjargargøta 4E, 1.5", "town": "Hoyvík", "zip": "188", "area": "Suðurstreymoy", "price": 4395000, "bid": null, "bidText": "", "expired": false, "built": "2021", "size": 96, "plot": null, "rooms": "3", "floors": "1", "status": "sold", "open": "", "rank": 100, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 56}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/krossgoeta-21-kaldbak", "img": "https://betriheim.cdn.fo/savn/nbqbkqjb/1.jpg?width=400&height=233&rmode=max&quality=50&t=3717756&s=6_tTisqPQHak7oJzhDx7KKrXplw", "type": "Sethús", "address": "Krossgøta 21", "town": "Kaldbak", "zip": "180", "area": "Suðurstreymoy", "price": 1950000, "bid": null, "bidText": "", "expired": false, "built": "1940", "size": 201, "plot": 399, "rooms": "4", "floors": "2", "status": "sold", "open": "", "rank": 101, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 57}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/bakkavegur-4-vestmanna-1", "img": "https://betriheim.cdn.fo/savn/2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o", "type": "Sethús", "address": "Bakkavegur 4", "town": "Vestmanna", "zip": "350", "area": "Norðstreymoy", "price": 2395000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "new", "open": "10. nov. við tilmelding", "rank": 102, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 58}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/sundsvegur-18-hvannasund", "img": "https://betriheim.cdn.fo/savn/dkmnrxhf/1.jpg?width=400&height=233&rmode=max&quality=50&s=SvcI1v9PWG4pV39Q_w0oEDja92Y", "type": "Sethús", "address": "Sundsvegur 18", "town": "Hvannasund", "zip": "740", "area": "Norðoyggjar", "price": 2150000, "bid": 1800000, "bidText": "", "expired": true, "built": "1913", "size": 165, "plot": 484, "rooms": "2", "floors": "3", "status": "", "open": "", "rank": 103, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 59}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/gardavegur-28-klaksvik", "img": "https://betriheim.cdn.fo/savn/1z0plbry/dji_fly_20261008_094104_619_1791448963995_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=184&s=1ILX3G47fm7g2MK6N1weP-gmt04", "type": "Sethús", "address": "Garðavegur 28", "town": "Klaksvík", "zip": "700", "area": "Norðoyggjar", "price": 2195000, "bid": null, "bidText": "", "expired": false, "built": "1956", "size": 131, "plot": 335, "rooms": "4", "floors": "2", "status": "new", "open": "", "rank": 104, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 60}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-169i-leirvik", "img": "https://betriheim.cdn.fo/savn/dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg", "type": "Grundstykki", "address": "Matr. 169i", "town": "Leirvík", "zip": "520", "area": "Eysturoy", "price": 995000, "bid": null, "bidText": "", "expired": false, "built": "2010", "size": 64, "plot": 32, "rooms": null, "floors": "2", "status": "new", "open": "", "rank": 105, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 61}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/purkugerdi-4-torshavn", "img": "https://betriheim.cdn.fo/savn/c4hj5x0l/1.jpg?width=400&height=233&rmode=max&quality=50&t=87&s=Mx-w6RKY-sDXRQmyJNCXBdgQ1pE", "type": "Sethús", "address": "Purkugerði 4", "town": "Tórshavn", "zip": "100", "area": "Suðurstreymoy", "price": 5995000, "bid": 5400000, "bidText": "", "expired": true, "built": "1985/2004", "size": 259, "plot": 500, "rooms": "5", "floors": "2", "status": "", "open": "", "rank": 106, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 62}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/maritugoeta-11-hoyvik", "img": "https://betriheim.cdn.fo/savn/poebh0aw/1.jpg?width=400&height=233&rmode=max&quality=50&t=45&s=BBzYZeEZ8Ke2Jc1GaHWXZXxbsuM", "type": "Sethús", "address": "Maritugøta 11", "town": "Hoyvík", "zip": "188", "area": "Suðurstreymoy", "price": 4850000, "bid": null, "bidText": "", "expired": false, "built": "2003", "size": 127, "plot": 137, "rooms": "3", "floors": "2", "status": "", "open": "", "rank": 107, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 63}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/javnagoeta-11-torshavn", "img": "https://betriheim.cdn.fo/savn/3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk", "type": "Sethús", "address": "Javnagøta 11", "town": "Tórshavn", "zip": "100", "area": "Suðurstreymoy", "price": 7495000, "bid": null, "bidText": "", "expired": false, "built": "2017", "size": 214, "plot": 500, "rooms": "3", "floors": "1", "status": "", "open": "", "rank": 108, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 64}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/groenlandsvegur-25-torshavn", "img": "https://betriheim.cdn.fo/savn/aivh2too/1.jpg?width=400&height=233&rmode=max&quality=50&t=45&s=fGJP2n2_VVn15f5WGyNOV5FfdP0", "type": "Sethús", "address": "Grønlandsvegur 25", "town": "Tórshavn", "zip": "100", "area": "Suðurstreymoy", "price": 5295000, "bid": null, "bidText": "", "expired": false, "built": "1964", "size": 198, "plot": 391, "rooms": "6", "floors": "3", "status": "", "open": "", "rank": 109, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 65}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/vid-myllutjoern-32-hoyvik", "img": "https://betriheim.cdn.fo/savn/msafuon4/16.jpg?width=400&height=233&rmode=max&quality=50&t=1802082&s=ZalixIk-SEbFPgZeydgB1NCqOQg", "type": "Sethús", "address": "við Myllutjørn 32", "town": "Hoyvík", "zip": "188", "area": "Suðurstreymoy", "price": 5195000, "bid": null, "bidText": "", "expired": false, "built": "2018", "size": 109, "plot": 213, "rooms": "4", "floors": "2", "status": "", "open": "", "rank": 110, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 66}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/birnugoeta-12-torshavn", "img": "https://betriheim.cdn.fo/savn/cyso3d5i/a-3.jpg?width=400&height=233&rmode=max&quality=50&t=1432&s=7ehqOPeKz58Kst4eWZPYzGXK384", "type": "Sethús", "address": "Birnugøta 12", "town": "Tórshavn", "zip": "100", "area": "Suðurstreymoy", "price": 4995000, "bid": null, "bidText": "", "expired": false, "built": "1951", "size": 112, "plot": 1211, "rooms": "4", "floors": "2", "status": "", "open": "", "rank": 111, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 67}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/skraddaragoeta-6-sandavagur", "img": "https://betriheim.cdn.fo/savn/kg4lgrcn/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=IQCxdCTBAwIVEuKpB4SrJ55VYvI", "type": "Sethús", "address": "Skraddaragøta 6", "town": "Sandavágur", "zip": "360", "area": "Vágar", "price": 1750000, "bid": null, "bidText": "", "expired": false, "built": "1945", "size": 155, "plot": 460, "rooms": "3", "floors": "3", "status": "", "open": "", "rank": 112, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 68}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/skulavegur-12-lon-2-ibud-01", "img": "https://betriheim.cdn.fo/savn/h3zcrvos/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=UWJ4gNosnt_4-yIlT91BcKcEKmc", "type": "Íbúð", "address": "Skúlavegur 12, Lon 2, íbúð 0.1", "town": "Strendur", "zip": "490", "area": "Eysturoy", "price": 1995000, "bid": null, "bidText": "", "expired": false, "built": "2026", "size": 57, "plot": 57, "rooms": "1", "floors": "1", "status": "", "open": "", "rank": 113, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 69}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/skulavegur-12-lon-1-ibud-02-strendur", "img": "https://betriheim.cdn.fo/savn/2yuf1ikg/dji_fly_20260624_143656_328_1782308239543_photo.jpg?width=400&height=233&rmode=max&quality=50&t=125&s=pfYbSud40TwwJq15XdFsmgaTyj0", "type": "Íbúð", "address": "Skúlavegur 12, Lon 1, íbúð 0.2", "town": "Strendur", "zip": "490", "area": "Eysturoy", "price": 2995000, "bid": null, "bidText": "", "expired": false, "built": "2026", "size": 110, "plot": null, "rooms": "3", "floors": "1", "status": "", "open": "", "rank": 114, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 70}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/glyvursvegur-33-og-matr-137-innan-glyvur", "img": "https://betriheim.cdn.fo/savn/12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0", "type": "Sethús", "address": "Glyvursvegur 33 og matr. 137", "town": "Innan Glyvur", "zip": "494", "area": "Eysturoy", "price": 2725000, "bid": null, "bidText": "", "expired": false, "built": "1960", "size": 212, "plot": 8240, "rooms": "4", "floors": "3", "status": "", "open": "", "rank": 115, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 71}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/vid-leitisstein-3-nordragoeta-1", "img": "https://betriheim.cdn.fo/savn/yjdfosuc/1.jpg?width=400&height=233&rmode=max&quality=50&t=27&s=HC6B13WS2eqO-UZsLwKwe5IBjv4", "type": "Sethús", "address": "Við Leitisstein 3", "town": "Norðragøta", "zip": "512", "area": "Eysturoy", "price": 3995000, "bid": null, "bidText": "", "expired": false, "built": "2026", "size": 292, "plot": null, "rooms": "1", "floors": "1", "status": "", "open": "", "rank": 116, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 72}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-nr-121-trongisvagur", "img": "https://betriheim.cdn.fo/savn/entowocz/matr-121.jpg?width=400&height=233&rmode=max&quality=50&t=14&s=_cllg-KLl3gnVwFhEjydJrFZtU0", "type": "Grundstykki", "address": "Matr. 121", "town": "Trongisvágur", "zip": "826", "area": "Suðuroy", "price": 495000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 11320, "rooms": null, "floors": null, "status": "", "open": "", "rank": 117, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 73}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-nr-699-tvoeroyri", "img": "https://betriheim.cdn.fo/savn/adyphdmf/matr-699.jpg?width=400&height=233&rmode=max&quality=50&t=13&s=2N1sLqo0p7nMf0Mc6T7XV-mqwCw", "type": "Grundstykki", "address": "Matr. 699", "town": "Tvøroyri", "zip": "800", "area": "Suðuroy", "price": 230000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 6410, "rooms": null, "floors": null, "status": "", "open": "", "rank": 118, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 74}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-nr-216b-og-216c-tvoeroyri", "img": "https://betriheim.cdn.fo/savn/u5hd2w5n/matr-216b-og-216c.jpg?width=400&height=233&rmode=max&quality=50&s=tnC-lwG3umKfVvUQDRhqeMUM-b0", "type": "Grundstykki", "address": "Matr. 216b og 216c", "town": "Tvøroyri", "zip": "800", "area": "Suðuroy", "price": 175900, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 1759, "rooms": null, "floors": null, "status": "", "open": "", "rank": 119, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 75}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-nr-215-frodba", "img": "https://betriheim.cdn.fo/savn/ztqfe2hu/matr-215.jpg?width=1920&rmode=min&t=12&s=Bu-q_8w_Il-Boil3_tW4GJrOVAM", "type": "Grundstykki", "address": "Matr. 215", "town": "Tvøroyri", "zip": "800", "area": "Suðuroy", "price": 300000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 5493, "rooms": null, "floors": null, "status": "", "open": "", "rank": 120, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 76}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/deildarvegur-7a-mikladalur", "img": "https://betriheim.cdn.fo/savn/ub4bmvra/1.jpg?width=1920&rmode=min&t=26&s=d1AEKurNE-OS3poN_oUX9g4Yo2c", "type": "Sethús", "address": "Deildarvegur 7A", "town": "Mikladalur", "zip": "797", "area": "Norðoyggjar", "price": 1995000, "bid": null, "bidText": "", "expired": false, "built": "2026", "size": 80, "plot": 315, "rooms": null, "floors": null, "status": "", "open": "", "rank": 121, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 77}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-nr-723-tvoeroyri", "img": "https://betriheim.cdn.fo/savn/tppjc03h/1.jpg?width=1920&rmode=min&t=12&s=ucAn4Rboo4-H4pen1ML0k7wtWPk", "type": "Grundstykki", "address": "Matr. nr. 723", "town": "Tvøroyri", "zip": "800", "area": "Suðuroy", "price": 165000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 3107, "rooms": null, "floors": null, "status": "", "open": "", "rank": 122, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 78}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-nr-237b-elduvik", "img": "https://betriheim.cdn.fo/savn/3f5nj0vu/1.jpg?width=1920&rmode=min&t=199&s=50sAXyaYMVfJ17OirEGNLWIyyMg", "type": "Grundstykki", "address": "Matr. nr. 237b", "town": "Elduvík", "zip": "478", "area": "Eysturoy", "price": 150000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 16256, "rooms": null, "floors": null, "status": "", "open": "", "rank": 123, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 79}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/lynggoeta-14-trongisvagur", "img": "https://betriheim.cdn.fo/savn/qdjbavkf/1.png?width=1920&bgcolor=fff&rmode=min&format=jpg&t=9939275&s=RMc5S8W9OAQwTgV8IgJmohsNdrM", "type": "Grundstykki", "address": "Lynggøta 14", "town": "Trongisvágur", "zip": "826", "area": "Suðuroy", "price": 125000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 844, "rooms": null, "floors": null, "status": "", "open": "", "rank": 124, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 80}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/i-heygnum-138-trongisvagur", "img": "https://betriheim.cdn.fo/savn/jcvej0wx/01.jpg?width=1920&rmode=min&s=ZH_szNxAlB9aiDyox-yZib5KnF0", "type": "Grundstykki", "address": "í Heygnum 138", "town": "Trongisvágur", "zip": "826", "area": "Suðuroy", "price": 250000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 750, "rooms": null, "floors": null, "status": "", "open": "", "rank": 125, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 81}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/matr-nr-111a-soervagur", "img": "https://betriheim.cdn.fo/savn/1b1nazkh/a-1.jpg?width=1920&rmode=min&t=5722&s=-a_1gPyUXBFlWteL3gfTaKFvs7Q", "type": "Grundstykki", "address": "Matr. nr. 111a Sørvágur", "town": "Sørvágur", "zip": "380", "area": "Vágar", "price": 395000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 7866, "rooms": null, "floors": null, "status": "", "open": "", "rank": 126, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 82}, {"agent": "betriheim", "url": "https://www.betriheim.fo/heim-til-soelu/lokkagardsvegur-5-sumba", "img": "https://betriheim.cdn.fo/savn/oylbrw1w/a-1.jpg?width=1920&rmode=min&t=58&s=6kuz0oR0YFBj2YZb6whvAJPW52w", "type": "Sethús", "address": "Lokkargarðsvegur 5", "town": "Sumba", "zip": "970", "area": "Suðuroy", "price": 595000, "bid": null, "bidText": "", "expired": false, "built": "1950", "size": 130, "plot": 330, "rooms": "3", "floors": "2", "status": "", "open": "", "rank": 127, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 83}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2032", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Gamlivegur_21_Oyndarfjordur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Gamlivegur 21", "town": "Oyndarfjørður", "area": "Eysturoy", "price": 1400000, "bid": 1550000, "bidText": "galdandi til 10.11.2026 kl. 11:30", "expired": false, "built": "1930", "size": 159, "plot": 194, "rooms": "3", "floors": "3", "status": "bid", "open": "", "rank": 200, "bidNewOn": "2026-11-07", "bidSeed": true, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 84}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2034", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Torshavn/ryskigota_41/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Ryskigøta 41", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 8700000, "bid": 9100000, "bidText": "galdandi til 09.11.2026 kl. 14:30", "expired": false, "built": "2025", "size": 286, "plot": 403, "rooms": "5", "floors": "2", "status": "bid", "open": "", "rank": 201, "bidNewOn": "2026-11-07", "bidSeed": true, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 85}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2035", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Torshavn/Granagota_24/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Granagøta 24", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 4900000, "bid": null, "bidText": "", "expired": false, "built": "1984", "size": 216, "plot": 390, "rooms": "3", "floors": "2", "status": "new", "open": "mikudagin 11. nov. við tilmelding", "rank": 202, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 86}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2026", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/Ovari_vegur_12_Tvoroyri/01.png&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Ovari Vegur 12", "town": "Tvøroyri", "area": "Suðuroy", "price": 1795000, "bid": 1900000, "bidText": "galdandi til 09.11.2026 kl. 14:00", "expired": false, "built": "1968", "size": 219, "plot": 565, "rooms": "5", "floors": "2", "status": "bid", "open": "", "rank": 203, "bidNewOn": "2026-11-07", "bidSeed": true, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 87}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2023", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Vagar/Tungureynsgota_2_Midvagur/1.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Tungureynsgøta 2", "town": "Miðvágur", "area": "Vágar", "price": 1900000, "bid": null, "bidText": "", "expired": false, "built": "1940", "size": 192, "plot": 224, "rooms": "3", "floors": "3", "status": "sold", "open": "", "rank": 204, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 88}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2019", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sandoy-og-Skuvoy/Heimasandsvegur_80_Sandur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Heimasandsvegur 80", "town": "Sandur", "area": "Sandoy", "price": 2600000, "bid": null, "bidText": "", "expired": false, "built": "1956", "size": 256, "plot": 489, "rooms": "4", "floors": "3", "status": "price", "open": "", "rank": 205, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 89}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1988", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Skalavegur_281_Skala/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Skálavegur 281", "town": "Skála", "area": "Eysturoy", "price": 2600000, "bid": null, "bidText": "", "expired": false, "built": "1990", "size": 178, "plot": 865, "rooms": "2", "floors": "3", "status": "sold", "open": "", "rank": 206, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 90}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2010", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordstreymoy/Brekkugerdi_20_Hosvik/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Brekkugerði 20", "town": "Hósvík", "area": "Norðstreymoy", "price": 4300000, "bid": null, "bidText": "", "expired": false, "built": "2010", "size": 211, "plot": 466, "rooms": "5", "floors": "2", "status": "price", "open": "", "rank": 207, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 91}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2033", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Argir/matr_nr_250a_Argir/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 250a", "town": "Argir", "area": "Suðurstreymoy", "price": 2800000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "new", "open": "", "rank": 208, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 92}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2029", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/I_Heygunum_104_Trongisvagur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Í Heygunum 104", "town": "Trongisvágur", "area": "Suðuroy", "price": 695000, "bid": null, "bidText": "", "expired": false, "built": "1968", "size": 164, "plot": 600, "rooms": "3", "floors": "2", "status": "new", "open": "", "rank": 209, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 93}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2015", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Vagar/i_geilini_6_sorvagur/01.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "í Geilini 6", "town": "Sørvágur", "area": "Vágar", "price": 1900000, "bid": 1400000, "bidText": "", "expired": true, "built": "1928", "size": 177, "plot": 728, "rooms": "3", "floors": "3", "status": "", "open": "", "rank": 210, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 94}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2030", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Hoganesvegur_25_Toftir/01.JPEG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Høganesvegur 25", "town": "Toftir", "area": "Eysturoy", "price": 3495000, "bid": null, "bidText": "", "expired": false, "built": "1977", "size": 313, "plot": 845, "rooms": "5", "floors": "3", "status": "", "open": "", "rank": 211, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 95}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2027", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/Toftavegur_101_Vagur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Toftavegur 101", "town": "Vágur", "area": "Suðuroy", "price": 1695000, "bid": null, "bidText": "", "expired": false, "built": null, "size": 264, "plot": 438, "rooms": "6", "floors": "2", "status": "", "open": "", "rank": 212, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 96}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2025", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Matr_nr_82_Selatrad/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 82", "town": "Selatrað", "area": "Eysturoy", "price": 700000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "", "open": "", "rank": 213, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 97}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2024", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Torshavn/Flatnagerdi_23_Torshavn/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Flatnagerði 23", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 4995000, "bid": null, "bidText": "", "expired": false, "built": "2000", "size": 226, "plot": 500, "rooms": "5", "floors": "2", "status": "", "open": "", "rank": 214, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 98}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2021", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordoyggjar/matr_nr_51_69_89_96a_Kunoy/01.JPEG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 69, 89, 96a & 51", "town": "Kunoy", "area": "Norðoyggjar", "price": 895000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "", "open": "", "rank": 215, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 99}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2022", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Torshavn/Brattabrekka_16_torshavn/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Brattabrekka 16", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 6895000, "bid": null, "bidText": "", "expired": false, "built": "1950", "size": 173, "plot": 451, "rooms": "6", "floors": "3", "status": "", "open": "", "rank": 216, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 100}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1952", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/B%C3%B8g%C3%B8ta_26_Sumba/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Bøgøta 26", "town": "Sumba", "area": "Suðuroy", "price": 995000, "bid": null, "bidText": "", "expired": false, "built": "1960", "size": 169, "plot": 607, "rooms": "4", "floors": "2", "status": "", "open": "", "rank": 217, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 101}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2020", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Torshavn/Brunagota_7_Torshavn/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Brúnagøta 7", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 4295000, "bid": null, "bidText": "", "expired": false, "built": "1986", "size": 216, "plot": 505, "rooms": "6", "floors": "2", "status": "", "open": "", "rank": 218, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 102}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1789", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nolsoy-og-Hestoy/valagota_23_nolsoy/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Válagøta 23", "town": "Nólsoy", "area": "Suðurstreymoy", "price": 395000, "bid": 350000, "bidText": "", "expired": true, "built": null, "size": null, "plot": 709, "rooms": null, "floors": null, "status": "", "open": "", "rank": 219, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 103}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2012", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/matr_nr_543_Strendur/01%20%282%29.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 543", "town": "Strendur", "area": "Eysturoy", "price": 100000, "bid": 70000, "bidText": "", "expired": true, "built": null, "size": 73, "plot": 63, "rooms": null, "floors": "2", "status": "", "open": "", "rank": 220, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 104}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2017", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Skakid_2_Rituvik/01%20%282%29.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Skákið 2", "town": "Rituvík", "area": "Eysturoy", "price": 3495000, "bid": null, "bidText": "", "expired": false, "built": "1984", "size": 260, "plot": 622, "rooms": "3", "floors": "2", "status": "", "open": "", "rank": 221, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 105}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2018", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/Vagsvegur_113_Vagur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Vágsvegur 113", "town": "Vágur", "area": "Suðuroy", "price": 2000000, "bid": null, "bidText": "", "expired": false, "built": "1980", "size": 319, "plot": 858, "rooms": "8", "floors": "3", "status": "", "open": "", "rank": 222, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 106}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1974", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Vagar/Bakkavegur_9_Sorvagur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Bakkavegur 9", "town": "Sørvágur", "area": "Vágar", "price": 850000, "bid": 450000, "bidText": "", "expired": true, "built": "1950", "size": 444, "plot": 676, "rooms": null, "floors": "3", "status": "", "open": "", "rank": 223, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 107}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2000", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Kaldbak/Matr.nr._49q_Kaldbak/01.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 49q", "town": "Kaldbak", "area": "Suðurstreymoy", "price": 1100000, "bid": 875000, "bidText": "", "expired": true, "built": null, "size": null, "plot": 432, "rooms": null, "floors": null, "status": "", "open": "", "rank": 224, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 108}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1985", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sudurstreymoy/Torshavn/Undir_Kerjum_2/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Undir Kerjum 2", "town": "Tórshavn", "area": "Suðurstreymoy", "price": 9895000, "bid": null, "bidText": "", "expired": false, "built": "1964", "size": 214, "plot": 1950, "rooms": "2", "floors": "1", "status": "", "open": "", "rank": 225, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 109}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1992", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/Torvheyggjur18_Frodba/01A.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Torvheyggjur 18", "town": "Froðba", "area": "Suðuroy", "price": 2600000, "bid": null, "bidText": "", "expired": false, "built": "1935", "size": 196, "plot": 2100, "rooms": "5", "floors": "2", "status": "", "open": "", "rank": 226, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 110}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1991", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordoyggjar/Selheygsgota_18_Klaksvik/01.JPEG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Selheygsgøta 18", "town": "Klaksvík", "area": "Norðoyggjar", "price": 2850000, "bid": 2500000, "bidText": "", "expired": true, "built": "1950", "size": 173, "plot": 223, "rooms": "4", "floors": "2", "status": "", "open": "", "rank": 227, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 111}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1752", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/vid_kykslid_4_vagur/01.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Við Kykslið 4", "town": "Vágur", "area": "Suðuroy", "price": 1850000, "bid": null, "bidText": "", "expired": false, "built": "2016", "size": 90, "plot": null, "rooms": "2", "floors": "1", "status": "", "open": "", "rank": 228, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 112}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1977", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Matr_nr_70q_Oyri/1.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 70q", "town": "Oyrarbakki", "area": "Eysturoy", "price": 247995, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 501, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 229, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 113}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1978", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Matr_nr_70r_Oyri/1.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 70r", "town": "Oyrarbakki", "area": "Eysturoy", "price": 249975, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 505, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 230, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 114}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1965", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/Matr_515_Vagur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 515", "town": "Vágur", "area": "Suðuroy", "price": 250000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 9376, "rooms": null, "floors": null, "status": "", "open": "", "rank": 231, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 115}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1959", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Sandoy-og-Skuvoy/Heimasandsvegur_117_Sandur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Heimasandsvegur 117", "town": "Sandur", "area": "Sandoy", "price": 3800000, "bid": null, "bidText": "", "expired": false, "built": "1830", "size": 267, "plot": 618, "rooms": "9", "floors": "3", "status": "", "open": "", "rank": 232, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 116}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1956", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/matrnr_565aog565f_vagur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 565a & 565f", "town": "Vágur", "area": "Suðuroy", "price": 900000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 13742, "rooms": null, "floors": null, "status": "", "open": "", "rank": 233, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 117}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1943", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordstreymoy/vid_Grastein_3_Hvalvik/01%20%282%29.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "við Grástein 3", "town": "Hvalvík", "area": "Norðstreymoy", "price": 302445, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 611, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 234, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 118}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1886", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/Matr_nr_546_Frodba_Tvoroyri/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 546", "town": "Froðba", "area": "Suðuroy", "price": 495000, "bid": null, "bidText": "", "expired": false, "built": null, "size": 46, "plot": 1035, "rooms": null, "floors": "2", "status": "", "open": "", "rank": 235, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 119}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1879", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Hornavegur_18_Oyri/Mynd%20av%20stykkinum.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Hornavegur 18", "town": "Oyri", "area": "Eysturoy", "price": 328185, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 663, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 236, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 120}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1878", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordstreymoy/matr_nr_%20137ai_Oyri/Mynd%20av%20stykkinum.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Lyngvegur 4", "town": "Norðskáli", "area": "Eysturoy", "price": 104700, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 698, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 237, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 121}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1874", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Undir_Gr%C3%B3theyggi_8_Oyrarbakki/3.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Undir Grótheyggi 8", "town": "Oyrarbakki", "area": "Eysturoy", "price": 86400, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 576, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 238, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 122}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1873", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Undir_Gr%C3%B3theyggi_3_Oyrarbakka/1.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Undir Grótheyggi 3", "town": "Oyrarbakki", "area": "Eysturoy", "price": 88650, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 591, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 239, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 123}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1720", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordstreymoy/Myllagota_7_Langasandur/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Myllágøta 7", "town": "Langasandur", "area": "Norðstreymoy", "price": 255420, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 516, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 240, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 124}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1868", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordstreymoy/matr_16n_H%C3%B3sv%C3%ADk/16n%20H%C3%B3sv%C3%ADk.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Brekkugerði 13", "town": "Hósvík", "area": "Norðstreymoy", "price": 318285, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 643, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 241, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 125}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1722", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Hornavegur_12_Oyri/01.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Hornavegur 12", "town": "Oyri", "area": "Eysturoy", "price": 294525, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 595, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 242, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 126}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1867", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordstreymoy/Matr_16b_H%C3%B3sv%C3%ADk/16b%20H%C3%B3sv%C3%ADk.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Brekkugerði 15", "town": "Hósvík", "area": "Norðstreymoy", "price": 318285, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 643, "rooms": null, "floors": null, "status": "fixed", "open": "", "rank": 243, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 127}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1758", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Suduroy/ovarivegur_36_sumba/01.jpg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Ovarivegur 36", "town": "Sumba", "area": "Suðuroy", "price": 360000, "bid": null, "bidText": "", "expired": false, "built": "1711", "size": 94, "plot": 1637, "rooms": null, "floors": "2", "status": "", "open": "", "rank": 244, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 128}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1853", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Nordoyggjar/Matr.nr.%2057b%20%C3%81rnafj%C3%B8r%C3%B0ur/02.jpeg&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 57b", "town": "Árnafjørður", "area": "Norðoyggjar", "price": 750000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 1152, "rooms": null, "floors": null, "status": "", "open": "", "rank": 245, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 129}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1806", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/rituvikarvegur_87_rituvik/01.JPEG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Sethús", "address": "Rituvíkarvegur 87", "town": "Rituvík", "area": "Eysturoy", "price": 4195000, "bid": null, "bidText": "", "expired": false, "built": null, "size": 950, "plot": 1400, "rooms": null, "floors": "1", "status": "", "open": "", "rank": 246, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 130}, {"agent": "skyn", "url": "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD1976", "img": "https://www.skyn.fo/admin/public/getimage.ashx?Image=/Files/Images/Ognir/Eysturoy/Matr_nr_70ab_Oyri/1.JPG&Width=720&Height=496&Crop=6&format=webp&quality=75", "type": "Grundstykki", "address": "Matr.nr. 70ab", "town": "Oyrarbakki", "area": "Eysturoy", "price": 247500, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": 500, "rooms": null, "floors": null, "status": "sold", "open": "", "rank": 247, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 131}, {"agent": "ogn", "url": "https://ogn.fo/properties/property/753", "img": "https://ogn.fo/upload/cache/images/4401-4600/488bbacd005552e62b5a8190d329ab179165383e_w530_h320_fC_ha50_va50_afp1.png", "type": "Grundstykki", "address": "Grundøki til íbúðarbygging", "town": "Leirvík", "area": "Eysturoy", "price": null, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "1535", "open": "", "rank": 50, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 132}, {"agent": "ogn", "url": "https://ogn.fo/properties/property/724", "img": "https://ogn.fo/upload/cache/images/4401-4600/d57ee8dcf77ef423a4bfdcf1a93f4f61dca61d26_w530_h320_fC_ha50_va50_afp1.jpg", "type": "Vinnubygningur", "address": "Bygningur og rakstrargøgn í konkursbúgvi", "town": "", "area": "", "price": null, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "", "open": "", "rank": 51, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 133}, {"agent": "ogn", "url": "https://ogn.fo/properties/property/704", "img": "https://ogn.fo/upload/cache/images/4201-4400/2fbb61bb8f7eb76f9d2922dc2c2aa014f9ad7118_w530_h320_fC_ha50_va50_afp1.jpg", "type": "Grundstykki", "address": "Grundøki til bústaðarbygging", "town": "Leynar", "area": "Norðstreymoy", "price": null, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "", "open": "", "rank": 52, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 134}, {"agent": "ogn", "url": "https://ogn.fo/properties/property/583", "img": "https://ogn.fo/upload/cache/images/4401-4600/50afe5045cc19c64a3d3ff897d454613e43e63f2_w530_h320_fC_ha50_va50_afp1.png", "type": "Íbúð", "address": "Íbúðir við Hálsatjørn", "town": "Strendur", "area": "Eysturoy", "price": 2795000, "bid": null, "bidText": "", "expired": false, "built": "2025", "size": 85, "plot": null, "rooms": "2", "floors": "1", "status": "", "open": "", "rank": 53, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 135}, {"agent": "ogn", "url": "https://ogn.fo/properties/property/479", "img": "https://ogn.fo/upload/cache/images/3801-4000/6800ff124b03f0ad878fbbc126e7220b7879df37_w530_h320_fC_ha50_va50_afp1.jpg", "type": "Grundstykki", "address": "Økir til íbúðarbygging", "town": "Skála", "area": "Eysturoy", "price": 1750000, "bid": null, "bidText": "", "expired": false, "built": null, "size": null, "plot": null, "rooms": null, "floors": null, "status": "", "open": "", "rank": 54, "firstSeen": "2026-11-07", "seed": true, "days": 0, "id": 136}];
+const TODAY = "2026-11-07";
+const MON=["jan.","feb.","mars","apr.","mai","juni","juli","aug.","sept.","okt.","nov.","des."];
+/* Nýtt síðan seinast: minnið liggur bert í hesum kaganum */
+const VISIT=(()=>{let st=null;try{st=JSON.parse(localStorage.getItem("heimfo_visit")||"null")}catch(e){}
+  const cur={date:TODAY,urls:L.map(o=>o.url),bids:Object.fromEntries(L.filter(o=>o.bid&&!o.expired).map(o=>[o.url,o.bid]))};
+  let prev=null;
+  if(st&&st.cur){prev=st.cur.date===TODAY?st.prev:st.cur}
+  try{localStorage.setItem("heimfo_visit",JSON.stringify({cur,prev}))}catch(e){}
+  return prev?{urls:new Set(prev.urls),bids:prev.bids||{},date:prev.date}:null;})();
+const isNewSinceVisit=o=>!!VISIT&&!VISIT.urls.has(o.url)&&o.status!=="sold";
+const isNewBidSinceVisit=o=>!!VISIT&&o.bid&&!o.expired&&o.status!=="sold"&&VISIT.urls.has(o.url)&&VISIT.bids[o.url]!==o.bid;
+/* friskleiki: 0 = í dag/1 dag, 1 = 2–3 dagar, 2 = 4–7 dagar; meklarans "Nýggj ogn" brúkt, meðan søgan er ung */
+const fresh=o=>{if(o.status==="sold")return -1;if(!o.seed&&o.days!=null){return o.days<=1?0:o.days<=3?1:o.days<=7?2:-1}return o.status==="new"?1:-1};
+const newBid=o=>o.bidNewOn&&!o.bidSeed&&o.status!=="sold"&&(new Date(TODAY)-new Date(o.bidNewOn))/864e5<=2;
+const dShort=iso=>{const d=new Date(iso+"T12:00:00");return `${d.getDate()}. ${MON[d.getMonth()]}`};
+const AREAS = ["Norðoyggjar","Eysturoy","Norðstreymoy","Suðurstreymoy","Vágar","Sandoy","Suðuroy"];
+const TYPES = [...new Set(L.map(o=>o.type))].sort((a,b)=>L.filter(o=>o.type===b).length-L.filter(o=>o.type===a).length);
+
+const kr = n => "Kr. " + n.toLocaleString("da-DK");
+const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = n => n.toLocaleString("da-DK");
+
+function chips(o){
+  const c=[];
+  if(o.status==="new") c.push('<span class="chip new">Nýggj ogn</span>');
+  if(o.status==="bid"&&!(isNewBidSinceVisit(o)||newBid(o))) c.push('<span class="chip bid">Boð</span>');
+  if(o.status==="price") c.push('<span class="chip price">Nýggjur prísur</span>');
+  if(o.status==="fixed") c.push('<span class="chip">Fastur prísur</span>');
+  if(o.status==="sold") c.push('<span class="chip sold">Selt</span>');
+  if(o.open) c.push('<span class="chip open">Opið hús</span>');
+  if(isNewSinceVisit(o)) c.push('<span class="chip visit">Nýtt síðan seinast</span>');
+  else if(!o.seed&&o.days===0) c.push('<span class="chip today">Nýtt í dag</span>');
+  else if(!o.seed&&o.days<=7&&o.status!=="sold") c.push(`<span class="chip today soft">Nýtt · ${o.days} ${o.days===1?"dag":"dagar"} síðan</span>`);
+  if(isNewBidSinceVisit(o)||newBid(o)) c.push('<span class="chip bidnew">Nýtt boð komið</span>');
+  if(o.backOn) c.push('<span class="chip">Til sølu aftur</span>');
+  if(o.priceChange<0&&o.status!=="price") c.push('<span class="chip price">Prísurin lækkaður</span>');
+  return `<div class="chips">${c.join("")}</div>`;
+}
+
+function ageText(o){
+  if(!o.firstSeen) return "";
+  if(o.seed) return o.days>0?`Til sølu í minst ${o.days} ${o.days===1?"dag":"dagar"} (síðan ${dShort(o.firstSeen)} ella fyrr)`:`Til sølu síðan ${dShort(o.firstSeen)} ella fyrr`;
+  if(o.days===0) return "Komið á marknaðin í dag";
+  return `Til sølu í ${o.days} ${o.days===1?"dag":"dagar"} · síðan ${dShort(o.firstSeen)}`;
+}
+function card(o){
+  const a=AGENTS[o.agent];
+  const f=[];
+  if(o.built) f.push(`<span>Byggiár <b>${esc(o.built)}</b></span>`);
+  if(o.size) f.push(`<span><b>${fmt(o.size)}</b> m²</span>`);
+  if(o.plot) f.push(`<span>Grund <b>${fmt(o.plot)}</b> m²</span>`);
+  if(o.rooms) f.push(`<span><b>${esc(o.rooms)}</b> kømur</span>`);
+  let line="";
+  if(o.status==="bid"&&o.bid) line=`<div class="bidline num">Seinasta boð ${kr(o.bid)}${o.bidPrev?` <span class="was">(var ${kr(o.bidPrev)})</span>`:""}${o.bidText?` · ${esc(o.bidText)}`:""}</div>`;
+  else if(o.expired&&o.bid) line=`<div class="bidline muted num">Útgingið boð ${kr(o.bid)}</div>`;
+  if(o.open) line+=`<div class="bidline" style="color:var(--green-ink)">Opið hús ${esc(o.open)}</div>`;
+  if(o.priceChange) line+=`<div class="bidline ${o.priceChange<0?"down":"up"} num">Prísurin ${o.priceChange<0?"lækkaður":"hækkaður"} ${fmt(Math.abs(o.priceChange))} kr. · frá ${kr(o.priceFirst)}</div>`;
+  return `<a class="card${o.status==="sold"?" is-sold":""}${fresh(o)>=0?" fresh"+fresh(o):""}${isNewSinceVisit(o)?" fresh0":""}${(isNewBidSinceVisit(o)||newBid(o))?" hasbid":""}" href="${esc(o.url)}" target="_blank" rel="noopener" title="Opna ognina hjá ${esc(a.name)}">
+    <div class="pic"><img src="${esc(o.img)}" alt="${esc(o.address)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="noimg">Mynd ikki tøk</span>${chips(o)}</div>
+    <div class="body">
+      <div class="addr">${esc(o.address)}</div>
+      <div class="town">${o.zip?o.zip+" ":""}${esc(o.town||"Staður ikki upplýstur")} · ${esc(o.type)}</div>
+      <div class="price num">${o.price?kr(o.price):'<span class="noprice">Prísur hjá meklaranum</span>'}${o.price&&o.size?`<span class="sqm">${fmt(Math.round(o.price/o.size))} kr./m²</span>`:""}</div>
+      ${line}
+      ${o.price&&o.status!=="sold"&&o.price>=200000?`<div class="monthly num">Lán: ca. ${fmt(Math.round(monthlyFor(o)))} kr. um mánaðin</div>`:""}
+      <div class="age">${ageText(o)}</div>
+      <div class="facts num">${f.join("")}</div>
+    </div>
+    <div class="src"><span class="srcl">Sí ognina hjá ${logo(o.agent)}</span><span class="ext" aria-hidden="true">↗</span></div>
+  </a>`;
+}
+
+const state={q:"",area:"",type:"",max:"",rooms:"",agents:new Set(Object.keys(AGENTS)),sort:"fresh",sold:false,only:""};
+function filtered(){
+  const q=state.q.trim().toLowerCase();
+  const r=L.filter(o=>
+    state.agents.has(o.agent) &&
+    (state.sold || o.status!=="sold") &&
+    (!state.area||o.area===state.area) &&
+    (!state.type||o.type===state.type) &&
+    (!state.max||(o.price&&o.price<=+state.max)) &&
+    (!state.rooms||(parseInt(o.rooms)||0)>=+state.rooms) &&
+    (!q||`${o.address} ${o.town} ${o.zip||""}`.toLowerCase().includes(q)) &&
+    (state.only!=="new"||isNewSinceVisit(o)) && (state.only!=="bids"||isNewBidSinceVisit(o)||newBid(o)));
+  const s=SORTS[state.sort]||SORTS.fresh;
+  return r.sort(s);
+}
+const pr=o=>o.status==="new"?0:o.status==="bid"||o.open?1:o.status==="price"?2:o.status==="sold"?9:3;
+const SORTS={new:(a,b)=>pr(a)-pr(b)||a.rank-b.rank,low:(a,b)=>(a.price||9e9)-(b.price||9e9),high:(a,b)=>(b.price||0)-(a.price||0),age:(a,b)=>(b.days||0)-(a.days||0)||a.rank-b.rank,drop:(a,b)=>(a.priceChange||0)-(b.priceChange||0),fresh:(a,b)=>(isNewSinceVisit(b)-isNewSinceVisit(a))||((fresh(a)<0?9:fresh(a))-(fresh(b)<0?9:fresh(b)))||(a.days??999)-(b.days??999)||a.rank-b.rank,sqm:(a,b)=>(a.price&&a.size?a.price/a.size:9e9)-(b.price&&b.size?b.price/b.size:9e9),size:(a,b)=>(b.size||0)-(a.size||0)};
+const opt=(arr,sel,all)=>`<option value="">${all}</option>`+arr.map(v=>`<option${v===sel?" selected":""}>${v}</option>`).join("");
+const PRICES=[[500000,"500.000"],[1000000,"1 mió."],[2000000,"2 mió."],[3000000,"3 mió."],[4000000,"4 mió."],[5000000,"5 mió."],[7500000,"7,5 mió."]];
+const priceOpt=sel=>`<option value="">Allir prísir</option>`+PRICES.map(([v,t])=>`<option value="${v}"${String(v)===String(sel)?" selected":""}>Upp í ${t}</option>`).join("");
+const roomOpt=sel=>`<option value="">Øll</option>`+[1,2,3,4,5].map(n=>`<option value="${n}"${String(n)===String(sel)?" selected":""}>${n}+ kømur</option>`).join("");
+
+const app=document.getElementById("app");
+const logo=(k,cls="alogo")=>`<img class="${cls}" src="${AGENTS[k].logo}" alt="${esc(AGENTS[k].name)}" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('strong'),{textContent:this.alt}))">`;
+
+/* Miðal m²-prísur: ognir við prísi og bústaðarvídd (minst 40 m²), ikki seldar, ikki grundøki/jørð */
+const sqmBase=o=>o.status!=="sold"&&o.price&&o.size>=40&&!["Grundstykki","Jørð"].includes(o.type);
+const avgSqm=arr=>{const b=arr.filter(sqmBase);return b.length?{avg:Math.round(b.reduce((s,o)=>s+o.price/o.size,0)/b.length),n:b.length}:null};
+function areaStat(r){
+  const here=avgSqm(r);
+  const label=state.type?`${state.type} í ${state.area}`:state.area;
+  if(!here) return `<div class="areastat"><div><span class="lbl">Miðal m²-prísur · ${esc(label)}</span><b>–</b><small>Ongar ognir við prísi og bústaðarvídd í hesum vali.</small></div></div>`;
+  const all=avgSqm(L.filter(o=>!state.type||o.type===state.type));
+  const diff=all?Math.round((here.avg/all.avg-1)*100):0;
+  const cmp=all?`<div class="cmp ${diff>0?"up":diff<0?"down":""}"><b>${diff>0?"+":""}${diff} %</b><span>í mun til Føroyar sum heild<br>(${fmt(all.avg)} kr./m²)</span></div>`:"";
+  return `<div class="areastat"><div><span class="lbl">Miðal m²-prísur · ${esc(label)}</span><b class="num">${fmt(here.avg)} kr./m²</b><small>Grundað á ${here.n} ${here.n===1?"ogn":"ognir"} við prísi og bústaðarvídd</small></div>${cmp}</div>`;
+}
+
+function viewHome(){
+  const active=L.filter(o=>o.status!=="sold");
+  const homes=active.filter(o=>o.price&&o.size>=40&&(o.type==="Sethús"||o.type==="Íbúð"));
+  const avg=Math.round(homes.reduce((s,o)=>s+o.price/o.size,0)/homes.length);
+  const newest=active.filter(o=>o.status==="new").sort((a,b)=>a.rank-b.rank);
+  const live=active.filter(o=>o.status==="bid"||o.open||o.status==="price"||o.priceChange<0);
+  const freshList=active.filter(o=>fresh(o)>=0||isNewSinceVisit(o)).sort(SORTS.fresh);
+  const nNew=active.filter(isNewSinceVisit).length, nBid=active.filter(o=>isNewBidSinceVisit(o)||newBid(o)).length;
+  const alertBar=(nNew||nBid)?`<div class="alerts">${nNew?`<button type="button" class="alert" data-only="new"><b>${nNew}</b> ${nNew===1?"nýggj ogn":"nýggjar ognir"} síðan tú vitjaði seinast →</button>`:""}${nBid?`<button type="button" class="alert bid" data-only="bids"><b>${nBid}</b> ${nBid===1?"nýtt boð":"nýggj boð"} →</button>`:""}</div>`:"";
+  app.innerHTML=`
+  <section class="hero">
+    <svg class="stripes" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 55 50 20l40 35" fill="none" stroke="#fff" stroke-width="9" stroke-linejoin="round"/><path d="M22 58v32h56V58" fill="none" stroke="#fff" stroke-width="7"/></svg>
+    <div class="wrap">
+      <div class="kicker">Føroyski bústaðarmarknaðurin</div>
+      <h1>Allar ognir. <span>Á einum staði.</span></h1>
+      <p class="lead">Ognir til sølu frá Meklarin, Betri Heim, Skyn og Ogn.fo í einum yvirliti. Trýst á eina ogn, so fert tú beint til ognina hjá meklaranum.</p>
+      <form class="search" id="hs">
+        <div class="field"><label for="hq">Gøta, bygd ella postnr.</label><input id="hq" type="search" placeholder="t.d. Klaksvík ella Hoyvík" value="${esc(state.q)}"></div>
+        <div class="field"><label for="ha">Øki</label><select id="ha">${opt(AREAS,state.area,"Øll øki")}</select></div>
+        <div class="field"><label for="ht">Slag</label><select id="ht">${opt(TYPES,state.type,"Øll sløg")}</select></div>
+        <div class="field"><label for="hm">Hægsti prísur</label><select id="hm">${priceOpt(state.max)}</select></div>
+        <button class="btn" type="submit">Leita</button>
+      </form>
+      <div class="stats num">
+        <div><b>${active.length}</b><span>ognir til sølu</span></div>
+        <div><b>${Object.keys(AGENTS).length}</b><span>meklarar og advokatar</span></div>
+        <div><b>${fmt(avg)}</b><span>miðal kr. pr. m² (hús og íbúðir)</span></div>
+      </div>
+    </div>
+  </section>
+  ${alertBar?`<div class="wrap">${alertBar}</div>`:""}
+  ${freshList.length?`<section class="block"><div class="wrap">
+    <div class="sec-head"><h2>Nýggjast</h2><a href="#ognir">Sí allar ognir →</a></div>
+    <div class="grid featured">${freshList.slice(0,9).map(card).join("")}</div>
+  </div></section>`:""}
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><h2>Ognir frá</h2></div>
+    <div class="agents">${Object.keys(AGENTS).map(k=>{const n=active.filter(o=>o.agent===k).length;return `<button type="button" class="agentcard" data-agent="${k}">${logo(k,"blogo")}<span class="num"><b>${n}</b> ognir til sølu</span><span class="go">Sí ognirnar →</span></button>`}).join("")}</div>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><h2>Boð, opin hús og prísbroytingar</h2></div>
+    <div class="grid">${live.map(card).join("")}</div>
+  </div></section>`;
+  document.querySelectorAll(".alert").forEach(b=>b.onclick=()=>{state.only=b.dataset.only;state.sort="fresh";location.hash="ognir"});
+  document.querySelectorAll(".agentcard").forEach(b=>b.onclick=()=>{state.agents=new Set([b.dataset.agent]);location.hash="ognir"});
+  document.getElementById("hs").addEventListener("submit",e=>{
+    e.preventDefault();
+    state.q=hq.value;state.area=ha.value;state.type=ht.value;state.max=hm.value;
+    location.hash="ognir";
+  });
+}
+
+function viewList(){
+  const counts={};L.forEach(o=>{if(state.sold||o.status!=="sold")counts[o.agent]=(counts[o.agent]||0)+1});
+  app.innerHTML=`
+  <div class="wrap page-head"><h1>Allar ognir</h1><p>Øll kortini leinkja beint til ognina hjá meklaranum, har tú finnur myndir, lýsing og boðgeving.</p></div>
+  <div class="wrap listing">
+    <form class="filters" id="ff" aria-label="Filtur">
+      <h3>Filtur</h3>
+      <div class="field"><label for="fq">Gøta, bygd ella postnr.</label><input id="fq" type="search" value="${esc(state.q)}"></div>
+      <div class="field"><label for="fa">Øki</label><select id="fa">${opt(AREAS,state.area,"Øll øki")}</select></div>
+      <div class="field"><label for="ft">Slag</label><select id="ft">${opt(TYPES,state.type,"Øll sløg")}</select></div>
+      <div class="field"><label for="fm">Hægsti prísur</label><select id="fm">${priceOpt(state.max)}</select></div>
+      <div class="field"><label for="fr">Kømur</label><select id="fr">${roomOpt(state.rooms)}</select></div>
+      <div class="field"><label>Meklari</label>
+        <div class="agentlist">${Object.entries(AGENTS).map(([k,a])=>`<label><input type="checkbox" id="ag-${k}" value="${k}"${state.agents.has(k)?" checked":""}> ${logo(k,"flogo")}<span class="cnt num">${counts[k]||0}</span></label>`).join("")}</div>
+      </div>
+      <div class="agentlist"><label><input type="checkbox" id="fs"${state.sold?" checked":""}> Vís eisini seldar ognir</label></div>
+      <button type="button" class="linkbtn" id="fx">Tak filtur burtur</button>
+    </form>
+    <div style="min-width:0">
+      <div class="results-bar">
+        <div class="count num" id="cnt"></div>
+        <div class="field"><label for="so">Raða eftir</label>
+          <select id="so">
+            <option value="fresh"${state.sort==="fresh"?" selected":""}>Nýggjast fyrst</option>
+            <option value="low"${state.sort==="low"?" selected":""}>Lægsti prísur</option>
+            <option value="high"${state.sort==="high"?" selected":""}>Hægsti prísur</option>
+            <option value="age"${state.sort==="age"?" selected":""}>Longst á marknaðinum</option>
+            <option value="drop"${state.sort==="drop"?" selected":""}>Størsta prísfall</option>
+            <option value="sqm"${state.sort==="sqm"?" selected":""}>Lægsti m²-prísur</option>
+            <option value="size"${state.sort==="size"?" selected":""}>Størsta vídd</option>
+          </select></div>
+      </div>
+      <p class="loanhint">Lánið á kortunum er roknað við ${calc.ownPct} % eginfígging og ${calc.years} ára lánstíð. <a href="#roknari">Broyt í lánsroknaranum</a></p>
+      <div id="areastat"></div>
+      <div id="res"></div>
+    </div>
+  </div>`;
+  const draw=()=>{
+    const r=filtered();
+    cnt.innerHTML=`${r.length} ${r.length===1?"ogn":"ognir"}${state.only?` · ${state.only==="new"?"nýggjar síðan seinast":"nýggj boð"} <button type="button" class="linkbtn" id="clronly">Vís allar</button>`:""}`;
+    const co=document.getElementById("clronly"); if(co) co.onclick=()=>{state.only="";draw()};
+    areastat.innerHTML=state.area?areaStat(r):"";
+    res.innerHTML=r.length?`<div class="grid">${r.map(card).join("")}</div>`:
+      `<div class="empty">Ongar ognir at vísa við hesum vali.<br><button class="linkbtn" id="fx2" type="button">Tak filtur burtur</button></div>`;
+    const fx2=document.getElementById("fx2"); if(fx2) fx2.onclick=reset;
+  };
+  const read=()=>{
+    state.q=fq.value;state.area=fa.value;state.type=ft.value;state.max=fm.value;state.rooms=fr.value;state.sold=fs.checked;state.sort=so.value;
+    state.agents=new Set([...document.querySelectorAll('.agentlist input[id^="ag-"]')].filter(i=>i.checked).map(i=>i.value));
+    draw();
+  };
+  const reset=()=>{Object.assign(state,{q:"",area:"",type:"",max:"",rooms:"",sold:false,only:"",agents:new Set(Object.keys(AGENTS))});viewList();};
+  ff.addEventListener("input",read);ff.addEventListener("change",read);ff.addEventListener("submit",e=>e.preventDefault());
+  so.addEventListener("change",read);fx.onclick=reset;
+  draw();
+}
+
+
+/* ---------- Lánsroknari (vegleiðandi) ---------- */
+const LOANS={vanligt:{name:"Bústaðarlán",rate:4.65},orku:{name:"Bústaðarlán til varandi orkuskipan",rate:4.45}};
+const SUBSIDY=0.35;
+const calc={loan:"vanligt",ownPct:10,years:30,price:3500000};
+function loanCalc(price,own,years,rate){
+  const P=Math.max(0,price-own), n=years*12, r=rate/100/12;
+  if(!P) return {P:0,gross:0,net:0,interest:0,subsidy:0,total:0};
+  const gross=r?P*r/(1-Math.pow(1+r,-n)):P/n, interest=gross*n-P, subsidy=interest*SUBSIDY;
+  return {P,gross,net:(gross*n-subsidy)/n,interest,subsidy,total:gross*n-subsidy};
+}
+const monthlyFor=o=>loanCalc(o.price,o.price*calc.ownPct/100,calc.years,LOANS[calc.loan].rate).net;
+
+function viewCalc(){
+  app.innerHTML=`
+  <div class="wrap page-head"><h1>Lánsroknari</h1><p>Rokna út, hvat eitt bústaðarlán kostar um mánaðin. Eginfíggingin og lánstíðin, tú velur her, verða eisini nýtt á kortunum við ognunum.</p></div>
+  <div class="wrap calc">
+    <form class="filters calcform" id="cf" aria-label="Lánsroknari">
+      <div class="field"><label for="cl">Slag av láni</label><select id="cl">${Object.entries(LOANS).map(([k,v])=>`<option value="${k}"${calc.loan===k?" selected":""}>${v.name} (${String(v.rate).replace(".",",")} %)</option>`).join("")}</select></div>
+      <div class="field"><label for="cp">Hvat kostar ognin?</label><div class="unit"><input id="cp" inputmode="numeric" value="${fmt(calc.price)}"><span>kr.</span></div></div>
+      <div class="field"><label for="co">Eginfígging</label><div class="unit"><input id="co" inputmode="numeric" value="${fmt(Math.round(calc.price*calc.ownPct/100))}"><span>kr.</span></div><input id="cor" type="range" min="0" max="50" step="1" value="${calc.ownPct}" aria-label="Eginfígging í prosent"><small id="cot"></small></div>
+      <div class="field"><label for="cy">Lánstíðarskeið</label><input id="cy" type="range" min="5" max="40" step="1" value="${calc.years}"><small id="cyt"></small></div>
+    </form>
+    <div class="calcout" id="out" aria-live="polite"></div>
+  </div>`;
+  const num=v=>+String(v).replace(/[^\d]/g,"")||0;
+  const draw=()=>{
+    const own=calc.price*calc.ownPct/100, rate=LOANS[calc.loan].rate, c=loanCalc(calc.price,own,calc.years,rate);
+    cot.textContent=`${calc.ownPct} % av prísinum`; cyt.textContent=`${calc.years} ár`;
+    const ltv=calc.price?c.P/calc.price*100:0;
+    out.innerHTML=`
+      <div class="pricebox">
+        <div class="lbl">Mett mánaðarligt gjald, íroknað rentustuðul</div>
+        <div class="big num">${fmt(Math.round(c.net))} kr.</div>
+        <div class="sub num">Uttan rentustuðul: ${fmt(Math.round(c.gross))} kr. · Rentan er ${String(rate).replace(".",",")} %</div>
+      </div>
+      <dl class="rows num">
+        <div><dt>Lánsupphædd</dt><dd>${fmt(Math.round(c.P))} kr.</dd></div>
+        <div><dt>Rentuútreiðslur tilsamans</dt><dd>${fmt(Math.round(c.interest))} kr.</dd></div>
+        <div><dt>Rentustuðul (35 %)</dt><dd>− ${fmt(Math.round(c.subsidy))} kr.</dd></div>
+        <div class="tot"><dt>Samlað afturgjald</dt><dd>${fmt(Math.round(c.total))} kr.</dd></div>
+      </dl>
+      ${ltv>80?`<p class="warn">Lánið er ${Math.round(ltv)} % av prísinum. Bankarnir lána vanliga í mesta lagi 80 % av virðinum, so restin krevur aðra fígging.</p>`:""}`;
+  };
+  cp.addEventListener("input",()=>{calc.price=num(cp.value);co.value=fmt(Math.round(calc.price*calc.ownPct/100));draw()});
+  cp.addEventListener("blur",()=>cp.value=fmt(calc.price));
+  co.addEventListener("input",()=>{const v=num(co.value);calc.ownPct=calc.price?Math.min(100,Math.round(v/calc.price*1000)/10):0;cor.value=calc.ownPct;draw()});
+  co.addEventListener("blur",()=>co.value=fmt(num(co.value)));
+  cor.addEventListener("input",()=>{calc.ownPct=+cor.value;co.value=fmt(Math.round(calc.price*calc.ownPct/100));draw()});
+  cy.addEventListener("input",()=>{calc.years=+cy.value;draw()});
+  cl.addEventListener("change",()=>{calc.loan=cl.value;draw()});
+  cf.addEventListener("submit",e=>e.preventDefault());
+  draw();
+}
+
+function route(){
+  const h=location.hash.replace("#","")||"forsida";
+  document.querySelectorAll("nav.main a").forEach(a=>{if(a.dataset.nav===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  if(h==="ognir") viewList(); else if(h==="roknari") viewCalc(); else viewHome();
+  window.scrollTo(0,0);
+}
+addEventListener("hashchange",route);
+
+/* ---------- Loyniorð (PBKDF2-SHA256) ---------- */
+const PW_HASH="heimfo-v1:600000:vz+HsVFqYY1/LcQz3Wfj4A==:yd9hIZJpKfzgFqoXJZwMc9EWvplUjaxljAromAcf+08=";
+async function checkPw(pw){
+  const [,it,salt,hash]=PW_HASH.split(":");
+  const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
+  const key=await crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveBits"]);
+  const bits=new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:b64(salt),iterations:+it},key,256));
+  return btoa(String.fromCharCode(...bits))===hash;
+}
+if(document.documentElement.classList.contains("locked")){
+  gateform.addEventListener("submit",async e=>{
+    e.preventDefault(); gatebtn.disabled=true; gateerr.textContent="";
+    let ok=false; try{ok=await checkPw(gatepw.value)}catch(err){}
+    gatebtn.disabled=false;
+    if(!ok){gateerr.textContent="Skeivt loyniorð.";gatepw.select();return}
+    try{sessionStorage.setItem("heimfo_ok","1")}catch(err){}
+    document.documentElement.classList.remove("locked"); route();
+  });
+} else route();
+
+</script>
+</body>
+</html>
