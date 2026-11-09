@@ -165,8 +165,8 @@ def skyn():
 # ---------- Ogn.fo ----------
 def ogn_type(title):
     t = title.lower()
+    if 'grund' in t or 'økir' in t or t.startswith('øki'): return 'Grundstykki'
     if 'íbúð' in t: return 'Íbúð'
-    if 'grund' in t or 'økir' in t or 'øki ' in t: return 'Grundstykki'
     if 'vinnu' in t or 'konkurs' in t or 'bygningur' in t or 'rakstur' in t: return 'Vinnubygningur'
     return 'Sethús'
 
