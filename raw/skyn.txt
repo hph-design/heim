@@ -1,7 +1,7 @@
-2032|Eysturoy/Gamlivegur_21_Oyndarfjordur/01.JPG|bid|Gamlivegur 21|Oyndarfjørður|159|194|3|3|1930|1400000|1600000|11-11-2026 kl. 10:00|
-2034|Sudurstreymoy/Torshavn/ryskigota_41/01.JPG|bid|Ryskigøta 41|Tórshavn|286|403|5|2|2025|8700000|9100000|09-11-2026 kl. 14:30|
+2032|Eysturoy/Gamlivegur_21_Oyndarfjordur/01.JPG|bid|Gamlivegur 21|Oyndarfjørður|159|194|3|3|1930|1400000|1700000|11-11-2026 kl. 12:00|
+2034|Sudurstreymoy/Torshavn/ryskigota_41/01.JPG|sold|Ryskigøta 41|Tórshavn|286|403|5|2|2025|8700000|||
 2035|Sudurstreymoy/Torshavn/Granagota_24/01.JPG|new|Granagøta 24|Tórshavn|216|390|3|2|1984|4900000|||við tilmelding mikudagin 11. november
-2026|Suduroy/Ovari_vegur_12_Tvoroyri/01.png|bid|Ovari Vegur 12|Tvøroyri|219|565|5|2|1968|1795000|1900000|09-11-2026 kl. 14:00|
+2026|Suduroy/Ovari_vegur_12_Tvoroyri/01.png|sold|Ovari Vegur 12|Tvøroyri|219|565|5|2|1968|1795000|||
 2023|Vagar/Tungureynsgota_2_Midvagur/1.JPG|sold|Tungureynsgøta 2|Miðvágur|192|224|3|3|1940|1900000|||
 2019|Sandoy-og-Skuvoy/Heimasandsvegur_80_Sandur/01.JPG|price|Heimasandsvegur 80|Sandur|256|489|4|3|1956|2600000|||
 1988|Eysturoy/Skalavegur_281_Skala/01.JPG|sold|Skálavegur 281|Skála|178|865|2|3|1990|2600000|||

@@ -913,7 +913,8 @@
 ],
 "img": "https://betriheim.cdn.fo/savn/h3zcrvos/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=UWJ4gNosnt_4-yIlT91BcKcEKmc",
 "lastSeen": "2026-11-09",
-"address": "Skúlavegur 12, Lon 2, íbúð 0.1"
+"address": "Skúlavegur 12, Lon 2, íbúð 0.1",
+"soldSeen": "2026-11-09"
 },
 "https://www.betriheim.fo/heim-til-soelu/skulavegur-12-lon-1-ibud-02-strendur": {
 "firstSeen": "2026-11-07",
@@ -1117,6 +1118,10 @@
 [
 "2026-11-09",
 1600000
+],
+[
+"2026-11-09",
+1700000
 ]
 ]
 },
@@ -1137,7 +1142,8 @@
 "2026-11-07",
 9100000
 ]
-]
+],
+"soldSeen": "2026-11-09"
 },
 "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2035": {
 "firstSeen": "2026-11-07",
@@ -1169,7 +1175,8 @@
 "2026-11-07",
 1900000
 ]
-]
+],
+"soldSeen": "2026-11-09"
 },
 "https://www.skyn.fo/default.aspx?id=212&ProductID=PROD2023": {
 "firstSeen": "2026-11-07",
