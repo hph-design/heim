@@ -649,7 +649,7 @@ function route(){
 addEventListener("hashchange",route);
 
 /* ---------- Loyniorð (PBKDF2-SHA256) ---------- */
-const PW_HASH="heimfo-v1:600000:vz+HsVFqYY1/LcQz3Wfj4A==:yd9hIZJpKfzgFqoXJZwMc9EWvplUjaxljAromAcf+08=";
+const PW_HASH="heimfo-v1:600000:ltBnXUfia2BWY1/7tOPvXQ==:IyNrsLC+MqPcBm1sUF3ToWF85+N0Z0YqHxaLfEu222g=";
 async function checkPw(pw){
   const [,it,salt,hash]=PW_HASH.split(":");
   const b64=x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0));
