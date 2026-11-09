@@ -1,0 +1,68 @@
+name: Dagfør Heim.fo
+
+on:
+  schedule:
+    - cron: '5 8-16 * * *'   # hvønn tíma kl. 08:05–16:05 (UTC = føroysk vetrartíð)
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: 'Merk nýggjar ognir í dag sum "til sølu síðan ella fyrr" (bert fyrstu ferð)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: heim-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installera
+        run: pip install requests beautifulsoup4
+
+      - name: Heinta ognir
+        run: python scrape.py raw
+
+      - name: Byggja síðuna
+        run: |
+          TODAY=$(TZ=Atlantic/Faroe date +%F)
+          if [ "${{ inputs.seed }}" = "true" ]; then export HEIM_SEED=$TODAY; fi
+          old=$(python -c "import json;print(len(json.load(open('history.json'))))")
+          mkdir -p out
+          python update.py raw . out "$TODAY" | tee out/summary.json
+          new=$(python -c "import json;print(len(json.load(open('out/history.json'))))")
+          if [ "$new" -lt "$old" ]; then echo "history.json varð styttri ($old -> $new) – steðgi"; exit 1; fi
+          cp out/history.json history.json
+          mkdir -p site
+          cp out/Heim.fo.html site/index.html
+          python add_gate.py site/index.html
+          grep -q 'id="gate"' site/index.html
+
+      - name: Goyma søgu og rádátur
+        run: |
+          git config user.name "heim-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add history.json raw/
+          if git diff --cached --quiet; then echo "Einki nýtt"; else git commit -m "Dagføring $(TZ=Atlantic/Faroe date '+%F %H:%M')" && git push; fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
