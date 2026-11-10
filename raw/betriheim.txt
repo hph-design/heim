@@ -1,4 +1,4 @@
-skulavegur-12-lon-2-ibud-01|h3zcrvos/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=UWJ4gNosnt_4-yIlT91BcKcEKmc|sold|Skúlavegur 12, Lon 2, íbúð 0.1|490 Strendur|1995000||2026|57|57|1|1|
+gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|new|Gerðisvegur 4|220 Skálavík|1500000|||||||Opið hús 16. november við tilmelding
 gardavegur-28-klaksvik|1z0plbry/dji_fly_20261008_094104_619_1791448963995_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=184&s=1ILX3G47fm7g2MK6N1weP-gmt04|bid|Garðavegur 28|700 Klaksvík|2195000|1900000|1956|131|335|4|2|
 bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o|new|Bakkavegur 4|350 Vestmanna|2395000|||||||Opið hús 10. november við tilmelding
 sundsvegur-18-hvannasund|dkmnrxhf/1.jpg?width=400&height=233&rmode=max&quality=50&s=SvcI1v9PWG4pV39Q_w0oEDja92Y|expired|Sundsvegur 18|740 Hvannasund|2150000|1800000|1913|165|484|2|3|
@@ -24,6 +24,7 @@ lynggoeta-14-trongisvagur|2mwaqqbl/2.jpg?width=400&height=233&rmode=max&quality=
 i-heygnum-138-trongisvagur|jcvej0wx/01.jpg?width=400&height=233&rmode=max&quality=50&s=cTtEv51kCxfjv7NGoynK_81hj-E||í Heygnum 138|826 Trongisvágur|250000||||750|||
 matr-nr-111a-soervagur|1b1nazkh/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=5722&s=8Xpb0-MFyYE5xlc0a_K1T1UJDtc||Matr. nr. 111a Sørvágur|380 Sørvágur|395000||||7866|||
 lokkagardsvegur-5-sumba|oylbrw1w/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=58&s=tF5vd8Ne-JlmZs280R4EIPhL23k||Lokkargarðsvegur 5|970 Sumba|595000||1950|130|330|3|2|
+skulavegur-12-lon-2-ibud-01|h3zcrvos/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=UWJ4gNosnt_4-yIlT91BcKcEKmc|sold|Skúlavegur 12, Lon 2, íbúð 0.1|490 Strendur|1995000||2026|57|57|1|1|
 krossgoeta-21-kaldbak|nbqbkqjb/1.jpg?width=400&height=233&rmode=max&quality=50&t=3717756&s=6_tTisqPQHak7oJzhDx7KKrXplw|sold|Krossgøta 21|180 Kaldbak|1950000||1940|201|399|4|2|
 ingibjargargoeta-4e-15-hoyvik|u5mlvl1i/24.jpg?width=400&height=233&rmode=max&quality=50&t=81491&s=AQdjCwI_RvsJexIzNJtxUEKYj8s|sold|Ingibjargargøta 4E, 1.5|188 Hoyvík|4395000||2021|96||3|1|
 skalavegur-337-skala|ka2jz3sx/1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=jtsr1gYmYp3m8LCNicQLaqBA--I|sold|Skálavegur 337|480 Skála|1995000||1955|169|775|5|3|
