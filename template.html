@@ -274,7 +274,7 @@ footer{background:#F6ECE3}
 .alogo{height:20px;width:auto;max-width:90px;display:block;color:#161717}
 .flogo{height:18px;width:auto;max-width:90px;display:block}
 .agentlist label{min-height:28px}
-.agents{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.agents{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
 .agentcard{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 18px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;cursor:pointer;text-align:left;box-shadow:var(--shadow);transition:border-color .15s,transform .15s}
 .agentcard:hover{border-color:var(--green);transform:translateY(-2px)}
 .blogo{height:38px;width:auto;max-width:150px;display:block}
@@ -318,7 +318,7 @@ footer{background:#F6ECE3}
 </style>
 </head>
 <body>
-<div class="demo" style="background:var(--green-ink)"><div class="wrap">Persónligt yvirlit · Dagført __UPDATED__ · __COUNT__ ognir frá 4 meklarum</div></div>
+<div class="demo" style="background:var(--green-ink)"><div class="wrap">Persónligt yvirlit · Dagført __UPDATED__ · __COUNT__ ognir frá 5 meklarum</div></div>
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#forsida" aria-label="Heim.fo, forsíða">
@@ -336,7 +336,7 @@ footer{background:#F6ECE3}
 <footer>
   <div class="wrap">
     <div><b>Heim.fo</b><br>HPH Designa</div>
-    <div>Upplýsingar og myndir koma frá Meklarin, Betri Heim, Skyn og Ogn.fo.<br>Myndirnar verða vístar beinleiðis frá heimasíðum teirra.</div>
+    <div>Upplýsingar og myndir koma frá Meklarin, Betri Heim, Skyn, Skift og Ogn.fo.<br>Myndirnar verða vístar beinleiðis frá heimasíðum teirra.</div>
   </div>
 </footer>
 <script>
@@ -344,7 +344,8 @@ const AGENTS = {
   meklarin: {name:"Meklarin",  kind:"Meklari",   logo:"https://www.meklarin.fo/wp-content/themes/lunnar-meklarin/images/logo.svg", home:"https://www.meklarin.fo/"},
   betriheim:{name:"Betri Heim",kind:"Meklari",   logo:"https://www.betriheim.fo/images/logo.svg", home:"https://www.betriheim.fo/"},
   skyn:     {name:"Skyn",      kind:"Meklari",   logo:"https://www.skyn.fo/Files/Templates/Designs/Skyn2026/img/skyn-logo.svg", home:"https://www.skyn.fo/"},
-  ogn:      {name:"Ogn.fo",    kind:"Advokatar", logo:"https://ogn.fo/site/templates/default/assets/images/logo.svg", home:"https://ogn.fo/"}
+  ogn:      {name:"Ogn.fo",    kind:"Advokatar", logo:"https://ogn.fo/site/templates/default/assets/images/logo.svg", home:"https://ogn.fo/"},
+  skift:    {name:"Skift",     kind:"Meklari",   logo:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjkgMTIgMjkyIDg4IiBmaWxsPSIjZGZiMDU5Ij48cGF0aCBkPSJtMTEuMiwzN3Y1OS44OGMwLC44Ny43MSwxLjU4LDEuNTgsMS41OGg2Ni4xN2MuODcsMCwxLjU4LS43MSwxLjU4LTEuNThzLS43MS0xLjU4LTEuNTgtMS41OEgxNC4zNnYtNTguM3MtLjQ5LTEtMS4zNi0xYy0xLDAtMS44LDEtMS44LDFaIi8+PHBhdGggZD0ibTM0LjA4LDczLjQ4bDMuNi04LjU0YzIuNzUsMS43MSw4LjA1LDMuNzIsMTEuNTMsMy43MiwyLjMyLDAsNC4yMS0uNzksNC4yMS0zLjU0LDAtMi41Ni0yLjU2LTMuNDItNi4xLTQuNTEtNS4xOC0xLjUyLTExLjcxLTQuMDMtMTEuNzEtMTIuMnM2LjI4LTEyLjc1LDE0LjctMTIuNzVjNS44LDAsMTEuMzUsMi4zOCwxNC45NSw2LjA0bC01LjQzLDYuODljLTMuMjMtMi4zOC02LjY1LTQuMTUtOS4zOS00LjE1LTIuMDcsMC0zLjkuODUtMy45LDMuMTEsMCwyLjYyLDIuODEsMy41NCw2LjU5LDQuNzYsNS41NSwxLjgzLDExLjUzLDQuMjEsMTEuNTMsMTIuMzhzLTYuNDEsMTIuOTktMTUuNSwxMi45OWMtNi4xLDAtMTIuNTEtMi40NC0xNS4wNy00LjIxWiIvPjxwYXRoIGQ9Im0xMDEuNzksMzYuMzl2MTUuOGguMTJsMTAuNDktMTUuOGgxMS40N2wtMTEuNTMsMTcuMTQsMTIuMjYsMjMuNDNoLTExLjgzbC03LjM4LTE1LjA3LTMuNiw1djEwLjA3aC0xMC40M3YtNDAuNTdoMTAuNDNaIi8+PHBhdGggZD0ibTE1OS45OSwzNi4zOXY0MC41N2gtMTAuNDl2LTQwLjU3aDEwLjQ5WiIvPjxwYXRoIGQ9Im0yMTYuNDcsMzYuMzl2OS4xNWgtMTcuNTF2Ni42NWgxNC41MnY5LjE1aC0xNC41MnYxNS42MmgtMTAuNDl2LTQwLjU3aDI4WiIvPjxwYXRoIGQ9Im0yNDAuMiw0NS41NHYtOS4xNWgzMi41MnY5LjE1aC0xMS4yMnYzMS40MmgtMTAuNDN2LTMxLjQyaC0xMC44NloiLz48cGF0aCBkPSJtMjk4LjY2LDc1Ljg0VjE1Ljk2YzAtLjg3LS43MS0xLjU4LTEuNTgtMS41OGgtNjYuMTdjLS44NywwLTEuNTguNzEtMS41OCwxLjU4cy43MSwxLjU4LDEuNTgsMS41OGg2NC41OXY1OC4zcy40OSwxLDEuMzYsMWMxLDAsMS44LTEsMS44LTFaIi8+PC9zdmc+", home:"https://www.skift.fo/"}
 };
 const L = __DATA__;
 const TODAY = "__TODAY__";
@@ -472,7 +473,7 @@ function viewHome(){
     <div class="wrap">
       <div class="kicker">Føroyski bústaðarmarknaðurin</div>
       <h1>Allar ognir. <span>Á einum staði.</span></h1>
-      <p class="lead">Ognir til sølu frá Meklarin, Betri Heim, Skyn og Ogn.fo í einum yvirliti. Trýst á eina ogn, so fert tú beint til ognina hjá meklaranum.</p>
+      <p class="lead">Ognir til sølu frá Meklarin, Betri Heim, Skyn, Skift og Ogn.fo í einum yvirliti. Trýst á eina ogn, so fert tú beint til ognina hjá meklaranum.</p>
       <form class="search" id="hs">
         <div class="field"><label for="hq">Gøta, bygd ella postnr.</label><input id="hq" type="search" placeholder="t.d. Klaksvík ella Hoyvík" value="${esc(state.q)}"></div>
         <div class="field"><label for="ha">Øki</label><select id="ha">${opt(AREAS,state.area,"Øll øki")}</select></div>

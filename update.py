@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Heim.fo – dagleg dagføring.
 
-Les dagsins rádátu (meklarin.txt, betriheim.txt, skyn.txt, ogn.txt) úr RAW,
+Les dagsins rádátu (meklarin.txt, betriheim.txt, skyn.txt, ogn.txt, skift.txt) úr RAW,
 dagførir history.json (fyrsta dag sædd, prísbroytingar, myndaslóðir) og
 byggir Heim.fo.html úr template.html.
 
@@ -16,6 +16,7 @@ from datetime import date
 RAW, KIT, OUT, TODAY = sys.argv[1:5]
 SEED_DATE = "2026-11-07"   # fyrsti dagur við dagføring; ognir sæddar tá: "í minsta lagi"
 SEED_DATES = {SEED_DATE, os.environ.get("HEIM_SEED", "")} - {""}  # HEIM_SEED: ein dagur, har nýggjar keldur verða sæddar
+AGENT_SEED = {'skift': '2026-11-10'}   # fyrsti dagur hjá nýggjum meklara
 
 AREA = {'Streymoy suður': 'Suðurstreymoy', 'Streymoy norð': 'Norðstreymoy'}
 TOWN = {}
@@ -93,6 +94,19 @@ for i, l in enumerate(lines('ogn.txt')):
         type=typ or 'Annað', address=title, town=town, area=TOWN.get(town, ''), price=num(price), bid=None, bidText='', expired=False,
         built=built or None, size=num(size), plot=num(plot), rooms=rooms or None, floors=floors or None, status=st, open='', rank=50 + i))
 
+# Skift: slug|img(path after /wp-content/uploads/)|status|address|town|area|size|plot|rooms|floors|built|price|bid|validuntil|openhouse
+SKIFT_AREA = {'Norðurstreymoy': 'Norðstreymoy', 'Suðurstreymur': 'Suðurstreymoy', 'Suðurstrymoy': 'Suðurstreymoy'}
+for i, l in enumerate(lines('skift.txt')):
+    f = l.split('|') + [''] * 15
+    slug, img, st, addr, town, area, size, plot, rooms, floors, built, price, bid, valid, openh = f[:15]
+    sz, pl = num(size), num(plot)
+    L.append(dict(agent='skift', url='https://www.skift.fo/properties/' + slug + '/',
+        img=('https://www.skift.fo/wp-content/uploads/' + img) if img else '',
+        type=guess(addr, sz, pl), address=addr, town=town, area=TOWN.get(town) or SKIFT_AREA.get(area, area), price=num(price), bid=num(bid),
+        bidText=('galdandi til ' + valid) if st == 'bid' and valid else '', expired=st == 'expired',
+        built=built or None, size=sz, plot=pl, rooms=rooms or None, floors=floors or None,
+        status='' if st == 'expired' else st, open=openh, rank=300 + i))
+
 # ---------- Søga ----------
 hp = os.path.join(OUT, 'history.json')
 if not os.path.exists(hp): hp = os.path.join(KIT, 'history.json')
@@ -104,7 +118,7 @@ for o in L:
     k = o['url']; seen_today.add(k)
     h = H.get(k)
     if h is None:
-        h = H[k] = {'firstSeen': TODAY, 'seed': TODAY in SEED_DATES, 'prices': [], 'img': ''}
+        h = H[k] = {'firstSeen': TODAY, 'seed': TODAY in SEED_DATES or TODAY == AGENT_SEED.get(o['agent']), 'prices': [], 'img': ''}
     h['lastSeen'] = TODAY
     h['address'] = o['address']
     if o['price'] and (not h['prices'] or h['prices'][-1][1] != o['price']):
@@ -118,7 +132,7 @@ for o in L:
         if not bids or bids[-1][1] != o['bid']:
             bids.append([TODAY, o['bid']])
         o['bidNewOn'] = bids[-1][0]
-        o['bidSeed'] = bids[-1][0] in SEED_DATES
+        o['bidSeed'] = bids[-1][0] in SEED_DATES or bids[-1][0] == AGENT_SEED.get(o['agent'])
         if len(bids) > 1: o['bidPrev'] = bids[-2][1]
     o['firstSeen'] = h['firstSeen']
     o['seed'] = h.get('seed', False)

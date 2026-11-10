@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Heim.fo – heintar ognir frá Meklarin, Betri Heim, Skyn og Ogn.fo.
+"""Heim.fo – heintar ognir frá Meklarin, Betri Heim, Skyn, Ogn.fo og Skift.
 
-Skrivar raw/meklarin.txt, raw/betriheim.txt, raw/skyn.txt og raw/ogn.txt
+Skrivar raw/meklarin.txt, raw/betriheim.txt, raw/skyn.txt, raw/ogn.txt og raw/skift.txt
 í sama sniði sum RUN.md lýsir, so update.py kann brúka tær óbroyttar.
 Um ein kelda svíkur, verður gamla fílan standandi, og feilurin verður
 skrivaður í raw/status.json.
@@ -188,8 +188,45 @@ def ogn():
     return rows
 
 
+# ---------- Skift ----------
+def skift():
+    soup = BeautifulSoup(get('https://www.skift.fo/').text, 'html.parser')
+    rows, seen = [], set()
+    num = lambda t: re.sub(r'\D', '', re.sub(r'm\s*2|m²', '', t or ''))
+    for a in soup.select('a.property-card'):
+        slug = a.get('href', '').split('/properties/')[-1].strip('/')
+        if not slug or slug in seen: continue
+        seen.add(slug)
+        st_txt = ','.join(txt(e).lower() for e in a.select('.property-card--status'))
+        if 'selt' in st_txt or 'seld' in st_txt: continue          # seldar ognir verða ikki tiknar við
+        img = a.select_one('.property-card--image-container img')
+        src = (img.get('data-src') or img.get('src') or '') if img else ''
+        src = '' if src.startswith('data:') else src.replace('https://www.skift.fo/wp-content/uploads/', '').split('?')[0]
+        info = a.select_one('.property-card--text-info')
+        h = txt(info.select_one('h5') if info else None) or (txt(info).split('  ')[0] if info else '')
+        parts = [x.strip() for x in h.split(',')]
+        town = parts.pop() if len(parts) > 1 else ''
+        area = txt(info.select_one('p')) if info else ''
+        f = {}
+        for e in a.select('.property-card--size'):
+            i = e.select_one('img')
+            k = ((i.get('data-src') or i.get('src') or '') if i else '').split('/')[-1].split('?')[0].replace('icon-', '').replace('.svg', '')
+            f[k] = txt(e)
+        price = bid = valid = ''
+        for r in a.select('.property-card--price-row'):
+            t = txt(r)
+            if re.search(r'Seinasta boð', t, re.I): bid = num(t.replace(',- kr.', ''))
+            elif re.search(r'Galdandi til', t, re.I): valid = re.sub(r'(?i)Galdandi til:?\s*', '', t).strip()
+            elif re.search(r'Prísuppskot', t, re.I): price = num(t.replace(',- kr.', ''))
+        st = 'bid' if bid else 'new' if ('nýtt' in st_txt or 'nýggj' in st_txt) else ''
+        rows.append('|'.join(clean(x) for x in [slug, src, st, ', '.join(parts), town, area, num(f.get('building-size')), num(f.get('plot-size')),
+                              f.get('rooms', ''), f.get('floors', ''), f.get('build-year', ''), price, bid, valid,
+                              'opið hús' if 'opið hús' in st_txt else '']))
+    return rows
+
+
 status = {}
-for name, fn, minimum in [('meklarin', meklarin, 5), ('betriheim', betriheim, 5), ('skyn', skyn, 5), ('ogn', ogn, 1)]:
+for name, fn, minimum in [('meklarin', meklarin, 5), ('betriheim', betriheim, 5), ('skyn', skyn, 5), ('ogn', ogn, 1), ('skift', skift, 1)]:
     try:
         rows = fn()
         if len(rows) < minimum: raise RuntimeError(f'bert {len(rows)} ognir')
