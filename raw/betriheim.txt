@@ -1,6 +1,6 @@
 gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|new|Gerðisvegur 4|220 Skálavík|1500000|||||||Opið hús 16. november við tilmelding
 gardavegur-28-klaksvik|1z0plbry/dji_fly_20261008_094104_619_1791448963995_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=184&s=1ILX3G47fm7g2MK6N1weP-gmt04|bid|Garðavegur 28|700 Klaksvík|2195000|1900000|1956|131|335|4|2|
-bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o|new|Bakkavegur 4|350 Vestmanna|2395000|||||||Opið hús 10. november við tilmelding
+bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o|new|Bakkavegur 4|350 Vestmanna|2395000||1924|344|584|4|3|
 sundsvegur-18-hvannasund|dkmnrxhf/1.jpg?width=400&height=233&rmode=max&quality=50&s=SvcI1v9PWG4pV39Q_w0oEDja92Y|expired|Sundsvegur 18|740 Hvannasund|2150000|1800000|1913|165|484|2|3|
 matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg|new|Matr. 169i|520 Leirvík|995000||2010|64|32||2|
 purkugerdi-4-torshavn|c4hj5x0l/1.jpg?width=400&height=233&rmode=max&quality=50&t=87&s=Mx-w6RKY-sDXRQmyJNCXBdgQ1pE|expired|Purkugerði 4|100 Tórshavn|5995000|5400000|1985|259|500|5|2|
@@ -40,4 +40,3 @@ matr-nr-260a-260f-og-260n-vestmanna|gxqorejp/1.jpg?width=400&height=233&rmode=ma
 famjinsvegur-41-famjin|f4snj4hb/1.jpg?width=400&height=233&rmode=max&quality=50&t=39&s=sia5qSmARd79DyzgD1R7w43wpgU|sold|Fámjinsvegur 41|870 Fámjin|395000||1906|157|651|4|3|
 steigarbrekka-14-sandavagur|xjfibkfz/1.jpg?width=400&height=233&rmode=max&quality=50&t=20&s=DfUQ0gG8SkBZXlbRACoexD8hKYw|sold|Steigarbrekka 14|360 Sandavágur|1700000||1926|120|179|1|3|
 uti-i-boe-26-sydrugoeta|qt4ou1sp/5-dji_fly_20260914_114138_480_1789382766790_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=69&s=s-xdAug-B2CFgujsnaTNMRlu5fM|sold|Úti á Bø 26|513 Syðrugøta|1695000||1940|||4|2|
-skaltavegur-10-klaksvik|4wkgkufp/1.jpg?width=400&height=233&rmode=max&quality=50&t=59&s=Dh1WqMg4KyGlSUpxE9zQfIsP7qM|sold|Skáltavegur 10|700 Klaksvík|2295000||1948|132|250|1|250|
