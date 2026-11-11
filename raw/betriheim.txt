@@ -1,8 +1,9 @@
+skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c|new|Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
+glyvursvegur-33-og-matr-137-innan-glyvur|12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0|bid|Glyvursvegur 33 og matr. 137|494 Innan Glyvur|2725000|2100000|1960|212|8240|4|3|
 gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|new|Gerðisvegur 4|220 Skálavík|1500000|||||||Opið hús 16. november við tilmelding
-gardavegur-28-klaksvik|1z0plbry/dji_fly_20261008_094104_619_1791448963995_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=184&s=1ILX3G47fm7g2MK6N1weP-gmt04|bid|Garðavegur 28|700 Klaksvík|2195000|1900000|1956|131|335|4|2|
 bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o|new|Bakkavegur 4|350 Vestmanna|2395000||1924|344|584|4|3|
 sundsvegur-18-hvannasund|dkmnrxhf/1.jpg?width=400&height=233&rmode=max&quality=50&s=SvcI1v9PWG4pV39Q_w0oEDja92Y|expired|Sundsvegur 18|740 Hvannasund|2150000|1800000|1913|165|484|2|3|
-matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg|new|Matr. 169i|520 Leirvík|995000||2010|64|32||2|
+matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg||Matr. 169i|520 Leirvík|995000||2010|64|32||2|
 purkugerdi-4-torshavn|c4hj5x0l/1.jpg?width=400&height=233&rmode=max&quality=50&t=87&s=Mx-w6RKY-sDXRQmyJNCXBdgQ1pE|expired|Purkugerði 4|100 Tórshavn|5995000|5400000|1985|259|500|5|2|
 maritugoeta-11-hoyvik|poebh0aw/1.jpg?width=400&height=233&rmode=max&quality=50&t=45&s=BBzYZeEZ8Ke2Jc1GaHWXZXxbsuM||Maritugøta 11|188 Hoyvík|4850000||2003|127|137|3|2|
 javnagoeta-11-torshavn|3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk||Javnagøta 11|100 Tórshavn|7495000||2017|214|500|3|1|
@@ -10,8 +11,6 @@ groenlandsvegur-25-torshavn|aivh2too/1.jpg?width=400&height=233&rmode=max&qualit
 vid-myllutjoern-32-hoyvik|msafuon4/16.jpg?width=400&height=233&rmode=max&quality=50&t=1802082&s=ZalixIk-SEbFPgZeydgB1NCqOQg||við Myllutjørn 32|188 Hoyvík|5195000||2018|109|213|4|2|
 birnugoeta-12-torshavn|cyso3d5i/a-3.jpg?width=400&height=233&rmode=max&quality=50&t=1432&s=7ehqOPeKz58Kst4eWZPYzGXK384||Birnugøta 12|100 Tórshavn|4995000||1951|112|1211|4|2|
 skraddaragoeta-6-sandavagur|kg4lgrcn/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=IQCxdCTBAwIVEuKpB4SrJ55VYvI||Skraddaragøta 6|360 Sandavágur|1750000||1945|155|460|3|3|
-skulavegur-12-lon-1-ibud-02-strendur|2yuf1ikg/dji_fly_20260624_143656_328_1782308239543_photo.jpg?width=400&height=233&rmode=max&quality=50&t=125&s=pfYbSud40TwwJq15XdFsmgaTyj0||Skúlavegur 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
-glyvursvegur-33-og-matr-137-innan-glyvur|12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0||Glyvursvegur 33 og matr. 137|494 Innan Glyvur|2725000||1960|212|8240|4|3|
 vid-leitisstein-3-nordragoeta-1|yjdfosuc/1.jpg?width=400&height=233&rmode=max&quality=50&t=27&s=HC6B13WS2eqO-UZsLwKwe5IBjv4||Við Leitisstein 3|512 Norðragøta|3995000||2026|292||1|1|
 matr-nr-121-trongisvagur|entowocz/matr-121.jpg?width=400&height=233&rmode=max&quality=50&t=14&s=_cllg-KLl3gnVwFhEjydJrFZtU0||Matr. 121|826 Trongisvágur|495000||||11320|||
 matr-nr-699-tvoeroyri|adyphdmf/matr-699.jpg?width=400&height=233&rmode=max&quality=50&t=13&s=2N1sLqo0p7nMf0Mc6T7XV-mqwCw||Matr. 699|800 Tvøroyri|230000||||6410|||
@@ -24,6 +23,7 @@ lynggoeta-14-trongisvagur|2mwaqqbl/2.jpg?width=400&height=233&rmode=max&quality=
 i-heygnum-138-trongisvagur|jcvej0wx/01.jpg?width=400&height=233&rmode=max&quality=50&s=cTtEv51kCxfjv7NGoynK_81hj-E||í Heygnum 138|826 Trongisvágur|250000||||750|||
 matr-nr-111a-soervagur|1b1nazkh/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=5722&s=8Xpb0-MFyYE5xlc0a_K1T1UJDtc||Matr. nr. 111a Sørvágur|380 Sørvágur|395000||||7866|||
 lokkagardsvegur-5-sumba|oylbrw1w/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=58&s=tF5vd8Ne-JlmZs280R4EIPhL23k||Lokkargarðsvegur 5|970 Sumba|595000||1950|130|330|3|2|
+gardavegur-28-klaksvik|1z0plbry/dji_fly_20261008_094104_619_1791448963995_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=184&s=1ILX3G47fm7g2MK6N1weP-gmt04|sold|Garðavegur 28|700 Klaksvík|2195000||1956|131|335|4|2|
 skulavegur-12-lon-2-ibud-01|h3zcrvos/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=UWJ4gNosnt_4-yIlT91BcKcEKmc|sold|Skúlavegur 12, Lon 2, íbúð 0.1|490 Strendur|1995000||2026|57|57|1|1|
 krossgoeta-21-kaldbak|nbqbkqjb/1.jpg?width=400&height=233&rmode=max&quality=50&t=3717756&s=6_tTisqPQHak7oJzhDx7KKrXplw|sold|Krossgøta 21|180 Kaldbak|1950000||1940|201|399|4|2|
 ingibjargargoeta-4e-15-hoyvik|u5mlvl1i/24.jpg?width=400&height=233&rmode=max&quality=50&t=81491&s=AQdjCwI_RvsJexIzNJtxUEKYj8s|sold|Ingibjargargøta 4E, 1.5|188 Hoyvík|4395000||2021|96||3|1|
