@@ -1,6 +1,6 @@
 2036|Sudurstreymoy/Argir/Vid_Klingurstjorn_48/01.JPG|new|Við Klingurstjørn 48|Argir|185|401|3|2|2024|6395000|||við tilmelding týsdagin 17. november
 2032|Eysturoy/Gamlivegur_21_Oyndarfjordur/01.JPG|sold|Gamlivegur 21|Oyndarfjørður|159|194|3|3|1930|1400000|||
-2035|Sudurstreymoy/Torshavn/Granagota_24/01.JPG|new|Granagøta 24|Tórshavn|216|390|3|2|1984|4900000|||við tilmelding mikudagin 11. november
+2035|Sudurstreymoy/Torshavn/Granagota_24/01.JPG|new|Granagøta 24|Tórshavn|216|390|3|2|1984|4900000|||
 2019|Sandoy-og-Skuvoy/Heimasandsvegur_80_Sandur/01.JPG|price|Heimasandsvegur 80|Sandur|256|489|4|3|1956|2600000|||
 2010|Nordstreymoy/Brekkugerdi_20_Hosvik/01.JPG|price|Brekkugerði 20|Hósvík|211|466|5|2|2010|4300000|||
 2033|Sudurstreymoy/Argir/matr_nr_250a_Argir/01.JPG|new|Matr.nr. 250a Kirkjubøur-Argir|Argir|0|0|0|0|0|2800000|||

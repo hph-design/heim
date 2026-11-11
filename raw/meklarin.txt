@@ -1,3 +1,4 @@
+Streymoy suður|Íbúð|2026/09/01-800x450.jpg|undir-kongavarda-23/|2009|undir Kongavarða 23 1hm|Argir|1 (2)||83|0|0||3.795.000||0||0|1
 Streymoy norð|Sethús|2026/11/a-1-800x450.jpg|heygatun-5/|1750 (2021-2024)|Heygatún 5|Vestmanna|2|111|117|1|0||2.295.000||0||0|
 Streymoy suður|Sethús|2026/10/01-800x450.jpg|millum-gilja-133/|1988|Millum Gilja 133|Hoyvík|4|500|212|0|0||5.495.000||0||0|1
 Sandoy|Sethús|2026/10/a-1-6-800x450.jpg|gardavegur-26/|1906|Garðavegur 26|Skopun|3|204|144|1|0||995.000||0||0|
@@ -11,7 +12,6 @@ Streymoy suður|Íbúð|2026/10/a-1-4-800x450.jpg|ingibjargargota-6a/|2018|Ingib
 Eysturoy|Íbúð|2026/10/01-3-800x450.jpg|leitisvegur-70d-saltangara/|2026|Leitisvegur 70D|Saltangará|2||89|1|0||3.595.000||0||0|
 Streymoy suður|Sethús|2025/08/01-3-800x450.jpg|eystan-heyg-17-2/|1970|Eystan Heyg 17|Tórshavn|5|344|257|0|0||5.950.000||0||0|
 Streymoy suður|Sethús|2026/10/a01-1-800x450.jpg|mannbrekka-8/|1975|Mannbrekka|Hoyvík|9|1.012|339|0|0||8.000.000||0||0|
-Streymoy suður|Íbúð|2026/09/01-800x450.jpg|undir-kongavarda-23/|2009|undir Kongavarða 23 1hm|Argir|1 (2)||83|0|0||3.900.000|3.600.000|0|30/10 kl. 10:00|1|
 Streymoy suður|Sethús|2026/10/01-2-800x450.jpg|vid-myllutjorn-22/|2014|við Myllutjørn 22|Hoyvík|4|213|110|0|0||4.995.000||0||0|
 Streymoy suður|Sethús|2026/04/01a-4-800x573.jpg|grasteinsgota-4/|1946-47|Grásteinsgøta 4|Tórshavn|7|835|192|0|0||4.495.000|3.900.000|0|04/11 kl. 12:00|1|
 Streymoy norð|Frítíðarogn, Jørð|2026/10/a01-2-800x450.jpg|streymnesvegur/||Streymnesvegur|Streymnes||10.520||0|0||600.000||0||0|
