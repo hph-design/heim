@@ -1,5 +1,4 @@
 753|cache/images/4401-4600/488bbacd005552e62b5a8190d329ab179165383e_w530_h320_fC_ha50_va50_afp1.png|Grundstykki|Grundøki í Leirvík til sølu til íbúðarbygging|Leirvík||||||1535|
 724|cache/images/4401-4600/d57ee8dcf77ef423a4bfdcf1a93f4f61dca61d26_w530_h320_fC_ha50_va50_afp1.jpg|Vinnubygningur|Bygningur og rakstrargøgn í konkursbúgvi til sølu||||||||
 704|cache/images/4201-4400/2fbb61bb8f7eb76f9d2922dc2c2aa014f9ad7118_w530_h320_fC_ha50_va50_afp1.jpg|Grundstykki|Grundøki í Leynum til sølu til bústaðarbygging||||||||
-583|cache/images/4401-4600/50afe5045cc19c64a3d3ff897d454613e43e63f2_w530_h320_fC_ha50_va50_afp1.png|Íbúð|Íbúðir við Hálsatjørn á Strondum||2795000|85|2|1|2025||
 479|cache/images/3801-4000/6800ff124b03f0ad878fbbc126e7220b7879df37_w530_h320_fC_ha50_va50_afp1.jpg|Grundstykki|Økir til íbúðarbygging á Skála til sølu||1750000||||||

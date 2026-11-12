@@ -1,10 +1,11 @@
+1959|Sandoy-og-Skuvoy/Heimasandsvegur_117_Sandur/01.JPG|price|Heimasandsvegur 117|Sandur|267|618|9|3|1830|3300000|||
 2036|Sudurstreymoy/Argir/Vid_Klingurstjorn_48/01.JPG|new|Við Klingurstjørn 48|Argir|185|401|3|2|2024|6395000|||við tilmelding týsdagin 17. november
 2032|Eysturoy/Gamlivegur_21_Oyndarfjordur/01.JPG|sold|Gamlivegur 21|Oyndarfjørður|159|194|3|3|1930|1400000|||
 2035|Sudurstreymoy/Torshavn/Granagota_24/01.JPG|new|Granagøta 24|Tórshavn|216|390|3|2|1984|4900000|||
 2019|Sandoy-og-Skuvoy/Heimasandsvegur_80_Sandur/01.JPG|price|Heimasandsvegur 80|Sandur|256|489|4|3|1956|2600000|||
 2010|Nordstreymoy/Brekkugerdi_20_Hosvik/01.JPG|price|Brekkugerði 20|Hósvík|211|466|5|2|2010|4300000|||
-2033|Sudurstreymoy/Argir/matr_nr_250a_Argir/01.JPG|new|Matr.nr. 250a Kirkjubøur-Argir|Argir|0|0|0|0|0|2800000|||
-2029|Suduroy/I_Heygunum_104_Trongisvagur/01.JPG|new|Í Heygunum 104|Trongisvágur|164|600|3|2|1968|695000|||
+2033|Sudurstreymoy/Argir/matr_nr_250a_Argir/01.JPG||Matr.nr. 250a Kirkjubøur-Argir|Argir|0|0|0|0|0|2800000|||
+2029|Suduroy/I_Heygunum_104_Trongisvagur/01.JPG||Í Heygunum 104|Trongisvágur|164|600|3|2|1968|695000|||
 2015|Vagar/i_geilini_6_sorvagur/01.jpg|expired|í Geilini 6|Sørvágur|177|728|3|3|1928|1900000|1400000||
 2030|Eysturoy/Hoganesvegur_25_Toftir/01.JPEG||Høganesvegur 25|Toftir|313|845|5|3|1977|3495000|||
 2027|Suduroy/Toftavegur_101_Vagur/01.JPG||Toftavegur 101|Vágur|264|438|6|2|0|1695000|||
@@ -15,7 +16,6 @@
 1952|Suduroy/Bøgøta_26_Sumba/01.JPG||Bøgøta 26|Sumba|169|607|4|2|1960|995000|||
 2020|Sudurstreymoy/Torshavn/Brunagota_7_Torshavn/01.JPG||Brúnagøta 7|Tórshavn|216|505|6|2|1986|4295000|||
 1789|Nolsoy-og-Hestoy/valagota_23_nolsoy/01.JPG|expired|Válagøta 23|Nólsoy|0|709|0|0|0|395000|350000||
-2012|Eysturoy/matr_nr_543_Strendur/01 (2).JPG|expired|matr.nr. 543 Strendur|Strendur|73|63|0|2|0|100000|70000||
 2017|Eysturoy/Skakid_2_Rituvik/01 (2).JPG||Skákið 2|Rituvík|260|622|3|2|1984|3495000|||
 2018|Suduroy/Vagsvegur_113_Vagur/01.JPG||Vágsvegur 113|Vágur|319|858|8|3|1980|2000000|||
 1974|Vagar/Bakkavegur_9_Sorvagur/01.JPG|expired|Bakkavegur 9|Sørvágur|444|676|0|3|1950|850000|450000||
@@ -27,7 +27,6 @@
 1977|Eysturoy/Matr_nr_70q_Oyri/1.JPG|fixed|Matr.nr. 70q Oyri|Oyrarbakki|0|501|0|0|0|247995|||
 1978|Eysturoy/Matr_nr_70r_Oyri/1.JPG|fixed|Matr.nr. 70r Oyri|Oyrarbakki|0|505|0|0|0|249975|||
 1965|Suduroy/Matr_515_Vagur/01.JPG||Matr.nr. 515 Vágur|Vágur|0|9376|0|0|0|250000|||
-1959|Sandoy-og-Skuvoy/Heimasandsvegur_117_Sandur/01.JPG||Heimasandsvegur 117|Sandur|267|618|9|3|1830|3800000|||
 1956|Suduroy/matrnr_565aog565f_vagur/01.JPG||matr.nr. 565a & matr.nr. 565f Vágur|Vágur|0|13742|0|0|0|900000|||
 1943|Nordstreymoy/vid_Grastein_3_Hvalvik/01 (2).jpg|fixed|við Grástein 3|Hvalvík|0|611|0|0|0|302445|||
 1886|Suduroy/Matr_nr_546_Frodba_Tvoroyri/01.JPG||Matr.nr. 546 Froðba|Froðba|46|1035|0|2|0|495000|||
