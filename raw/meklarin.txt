@@ -1,5 +1,7 @@
-Streymoy suður|Íbúð|2026/09/01-800x450.jpg|undir-kongavarda-23/|2009|undir Kongavarða 23 1hm|Argir|1 (2)||83|0|0||3.795.000||0||0|1
+Suðuroy|Sethús|2026/11/a01-800x450.jpg|lopransvegur-23/|Uml. 1925|Lopransvegur 23|Lopra|4|485|148|1|0||375.000||0||0|
+Streymoy suður|Íbúð|2026/11/01-800x431.jpg|landavegur-94a-3-13/|2021|Landavegur 94A 3.13|Tórshavn|2||66|1|0||4.495.000||0||0|
 Streymoy norð|Sethús|2026/11/a-1-800x450.jpg|heygatun-5/|1750 (2021-2024)|Heygatún 5|Vestmanna|2|111|117|1|0||2.295.000||0||0|
+Streymoy suður|Íbúð|2026/09/01-800x450.jpg|undir-kongavarda-23/|2009|undir Kongavarða 23 1hm|Argir|1 (2)||83|0|0||3.795.000||0||0|1
 Streymoy suður|Sethús|2026/10/01-800x450.jpg|millum-gilja-133/|1988|Millum Gilja 133|Hoyvík|4|500|212|0|0||5.495.000||0||0|1
 Sandoy|Sethús|2026/10/a-1-6-800x450.jpg|gardavegur-26/|1906|Garðavegur 26|Skopun|3|204|144|1|0||995.000||0||0|
 Streymoy suður|Sethús|2026/10/a-1-5-800x450.jpg|haraldstrod-10-torshavn/|1970|Haraldstrøð 10|Tórshavn|4|400|228|1|0||5.995.000||0||0|
@@ -16,7 +18,6 @@ Streymoy suður|Sethús|2026/10/01-2-800x450.jpg|vid-myllutjorn-22/|2014|við My
 Streymoy suður|Sethús|2026/04/01a-4-800x573.jpg|grasteinsgota-4/|1946-47|Grásteinsgøta 4|Tórshavn|7|835|192|0|0||4.495.000|3.900.000|0|04/11 kl. 12:00|1|
 Streymoy norð|Frítíðarogn, Jørð|2026/10/a01-2-800x450.jpg|streymnesvegur/||Streymnesvegur|Streymnes||10.520||0|0||600.000||0||0|
 Suðuroy|Sethús|2026/10/a01-800x450.jpg|misavegur-2/|2000 / 2010 / 2025|Misávegur 2|Vágur|4|409|216|0|0||2.200.000||0||0|
-Streymoy suður|Sethús|2026/08/a-1-6-800x450.jpg|velbastadvegur-35-torshavn/|1956|Velbastaðvegur 35|Tórshavn|4|347|129|0|0||3.995.000||0||0|
 Streymoy norð|Jørð|2026/09/Kortal-1-800x539.jpg|jord-matr-nr-402d-og-402c-kvivik/||matr.nr. 402c og 402d|kvívík||40.050||0|0||5.000.000||0||0|
 Suðuroy|Frítíðarogn, Sethús|2026/07/a01-3-800x450.jpg|i-leivsgardi-6/|1937|Í Leivsgarði 6|Hov|2|1.125|127|0|0||975.000||0||0|
 Vágar|Íbúð, Íbúðarbygningur, Vinnubygningur, Vinnuhøli|2026/07/a01-1-800x450.jpg|inni-a-stod-5-jatnavegur-30/|2008|Inni á Støð 5 – Jatnavegur 30|Miðvágur|3|224|280|0|0||5.500.000||0||0|
