@@ -1,10 +1,8 @@
-skraddaragoeta-6-sandavagur|kg4lgrcn/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=IQCxdCTBAwIVEuKpB4SrJ55VYvI|sold|Skraddaragøta 6|360 Sandavágur|1750000||1945|155|460|3|3|
-sundsvegur-18-hvannasund|dkmnrxhf/1.jpg?width=400&height=233&rmode=max&quality=50&s=SvcI1v9PWG4pV39Q_w0oEDja92Y|sold|Sundsvegur 18|740 Hvannasund|2150000||1913|165|484|2|3|
+gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|bid|Gerðisvegur 4|220 Skálavík|1500000|1800000|1981|126|1315|3|1|
 stangatroed-17-klaksvik|plhf0hxs/1.jpg?width=400&height=233&rmode=max&quality=50&t=38&s=Kuwqb_6iaMEIZko2OOZh13bLjj0|new|Stangatrøð 17|700 Klaksvík|3795000|||||||Opið hús 18. november við tilmelding
 nordurstiggjur-4-argir|41kplgcf/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=N5Jn1rVK--UCGhFhrxMWGNmPkVM|new|Norðurstíggjur 4|160 Argir|4995000|||||||Opið hús 17. november við tilmelding
 skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c|new|Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
 glyvursvegur-33-og-matr-137-innan-glyvur|12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0|bid|Glyvursvegur 33 og matr. 137|494 Innan Glyvur|2725000|2100000|1960|212|8240|4|3|
-gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|new|Gerðisvegur 4|220 Skálavík|1500000|||||||Opið hús 16. november við tilmelding
 bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o|new|Bakkavegur 4|350 Vestmanna|2395000||1924|344|584|4|3|
 matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg||Matr. 169i|520 Leirvík|995000||2010|64|32||2|
 purkugerdi-4-torshavn|c4hj5x0l/1.jpg?width=400&height=233&rmode=max&quality=50&t=87&s=Mx-w6RKY-sDXRQmyJNCXBdgQ1pE|expired|Purkugerði 4|100 Tórshavn|5995000|5400000|1985|259|500|5|2|
@@ -25,6 +23,8 @@ lynggoeta-14-trongisvagur|2mwaqqbl/2.jpg?width=400&height=233&rmode=max&quality=
 i-heygnum-138-trongisvagur|jcvej0wx/01.jpg?width=400&height=233&rmode=max&quality=50&s=cTtEv51kCxfjv7NGoynK_81hj-E||í Heygnum 138|826 Trongisvágur|250000||||750|||
 matr-nr-111a-soervagur|1b1nazkh/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=5722&s=8Xpb0-MFyYE5xlc0a_K1T1UJDtc||Matr. nr. 111a Sørvágur|380 Sørvágur|395000||||7866|||
 lokkagardsvegur-5-sumba|oylbrw1w/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=58&s=tF5vd8Ne-JlmZs280R4EIPhL23k||Lokkargarðsvegur 5|970 Sumba|595000||1950|130|330|3|2|
+sundsvegur-18-hvannasund|dkmnrxhf/1.jpg?width=400&height=233&rmode=max&quality=50&s=SvcI1v9PWG4pV39Q_w0oEDja92Y|sold|Sundsvegur 18|740 Hvannasund|2150000||1913|165|484|2|3|
+skraddaragoeta-6-sandavagur|kg4lgrcn/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=IQCxdCTBAwIVEuKpB4SrJ55VYvI|sold|Skraddaragøta 6|360 Sandavágur|1750000||1945|155|460|3|3|
 gardavegur-28-klaksvik|1z0plbry/dji_fly_20261008_094104_619_1791448963995_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=184&s=1ILX3G47fm7g2MK6N1weP-gmt04|sold|Garðavegur 28|700 Klaksvík|2195000||1956|131|335|4|2|
 skulavegur-12-lon-2-ibud-01|h3zcrvos/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=UWJ4gNosnt_4-yIlT91BcKcEKmc|sold|Skúlavegur 12, Lon 2, íbúð 0.1|490 Strendur|1995000||2026|57|57|1|1|
 krossgoeta-21-kaldbak|nbqbkqjb/1.jpg?width=400&height=233&rmode=max&quality=50&t=3717756&s=6_tTisqPQHak7oJzhDx7KKrXplw|sold|Krossgøta 21|180 Kaldbak|1950000||1940|201|399|4|2|
@@ -40,4 +40,4 @@ maritugoeta-45-hoyvik|42pjmedp/1.jpg?width=400&height=233&rmode=max&quality=50&t
 a-eystaru-hellu-24-kvivik|vawlh23j/1.jpg?width=400&height=233&rmode=max&quality=50&t=56&s=eFeB7iFfuGegHugdyMB8Q_J59p8|sold|Á Eystaru Hellu 24|340 Kvívík|2995000||1974|211|855|5|2|
 matr-nr-260a-260f-og-260n-vestmanna|gxqorejp/1.jpg?width=400&height=233&rmode=max&quality=50&t=10&s=kix0HtQWBf8bCH5LPdLg6gGSkSU|sold|Matr. nr. 260a, 260f og 260n|350 Vestmanna|345000||||4861|||
 famjinsvegur-41-famjin|f4snj4hb/1.jpg?width=400&height=233&rmode=max&quality=50&t=39&s=sia5qSmARd79DyzgD1R7w43wpgU|sold|Fámjinsvegur 41|870 Fámjin|395000||1906|157|651|4|3|
-steigarbrekka-14-sandavagur|xjfibkfz/1.jpg?width=400&height=233&rmode=max&quality=50&t=20&s=DfUQ0gG8SkBZXlbRACoexD8hKYw|sold|Steigarbrekka 14|360 Sandavágur|1700000||1926|120|179|1|3|
+steigarbrekka-14-sandavagur|xjfibkfz/1.jpg?width=400&height=233&rmode=max&quality=50&t=20&s=DfUQ0gG8SkBZXlbRACoexD8hKYw||Steigarbrekka 14|360 Sandavágur|1700000||1926|120|179|1|3|
