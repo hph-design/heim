@@ -1,10 +1,10 @@
-Suðuroy|Sethús|2026/11/a01-800x450.jpg|lopransvegur-23/|Uml. 1925|Lopransvegur 23|Lopra|4|485|148|1|0||375.000||0||0|
+Streymoy suður|Sethús|2026/10/a-1-5-800x450.jpg|haraldstrod-10-torshavn/|1970|Haraldstrøð 10|Tórshavn|4|400|228|0|0||5.995.000|5.600.000|1|19/11 kl. 11:00|0|
 Streymoy suður|Íbúð|2026/11/01-800x431.jpg|landavegur-94a-3-13/|2021|Landavegur 94A 3.13|Tórshavn|2||66|1|0||4.495.000||0||0|
+Suðuroy|Sethús|2026/11/a01-800x450.jpg|lopransvegur-23/|Uml. 1925|Lopransvegur 23|Lopra|4|485|148|1|0||375.000||0||0|
 Streymoy norð|Sethús|2026/11/a-1-800x450.jpg|heygatun-5/|1750 (2021-2024)|Heygatún 5|Vestmanna|2|111|117|1|0||2.295.000||0||0|
 Streymoy suður|Íbúð|2026/09/01-800x450.jpg|undir-kongavarda-23/|2009|undir Kongavarða 23 1hm|Argir|1 (2)||83|0|0||3.795.000||0||0|1
 Streymoy suður|Sethús|2026/10/01-800x450.jpg|millum-gilja-133/|1988|Millum Gilja 133|Hoyvík|4|500|212|0|0||5.495.000||0||0|1
 Sandoy|Sethús|2026/10/a-1-6-800x450.jpg|gardavegur-26/|1906|Garðavegur 26|Skopun|3|204|144|1|0||995.000||0||0|
-Streymoy suður|Sethús|2026/10/a-1-5-800x450.jpg|haraldstrod-10-torshavn/|1970|Haraldstrøð 10|Tórshavn|4|400|228|1|0||5.995.000||0||0|
 Streymoy suður|Tvíhús|2026/10/e-800x450.jpg|niels-finsens-gota-47-torshavn/|1914|Niels Finsens gøta 47|Tórshavn|3|86|120|1|0||5.000.000||0||0|
 Streymoy norð|Vinnubygningur|2026/10/a01-5-800x450.jpg|bakkavegur-41/|Uml. 1900|Bakkavegur 41|Vestmanna||277|Uml. 400|1|0||4.500.000||0||0|
 Streymoy suður|Íbúð|2026/10/a01-4-800x450.jpg|ingibjargargota-4a/|2021|Ingibjargargøta 4A|Hoyvík|3|439|92|1|0||4.200.000||0||0|

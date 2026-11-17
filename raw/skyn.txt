@@ -1,11 +1,12 @@
-2042|Nordstreymoy/Nidari_Vegur_12_Vestmanna/01.jpg|new|Niðari Vegur 12|Vestmanna|143|238|5|3|1929|2195000|||við tilmelding mánadagin 23. november
+2027|Suduroy/Toftavegur_101_Vagur/01.JPG|bid|Toftavegur 101|Vágur|264|438|6|2|0|1695000|1375000|20-11-2026 kl. 16:00|
+2042|Nordstreymoy/Nidari_Vegur_12_Vestmanna/02.JPG|new|Niðari Vegur 12|Vestmanna|143|238|5|3|1929|2195000|||við tilmelding mánadagin 23. november
 2038|Sudurstreymoy/Hoyvik/Karlamagnusarbreyt_16C_Hoyvik/01.JPG|new|Karlamagnusarbreyt 16C||65|0|2|1|2020|2800000|||
 2037|Eysturoy/Agnid_17_Nes/01.JPEG|new|Agnið 17|Nes|82|0|2|1|2026|2700000|||við tilmelding hósdagin 19. november
 2039|Eysturoy/Bryggjan_ibud_B1_1_Runavik/01.jpg|new|Bryggjan, íbúð B1.1|Runavík|77|0|3|1|2027|3795000|||við tilmelding hósdagin 19. november
 2040|Eysturoy/Bryggjan_ibud_B2_2_Runavik/01.jpg|new|Bryggjan, íbúð B2.2|Runavík|55|0|1|1|2027|2695000|||við tilmelding hósdagin 19. november
 2041|Eysturoy/Bryggjan_ibud_B3_3_Runavik/01.jpg|new|Bryggjan, íbúð B3.3|Runavík|108|0|3|2|2027|5395000|||við tilmelding hósdagin 19. november
 1959|Sandoy-og-Skuvoy/Heimasandsvegur_117_Sandur/01.JPG|price|Heimasandsvegur 117|Sandur|267|618|9|3|1830|3300000|||
-2036|Sudurstreymoy/Argir/Vid_Klingurstjorn_48/01.JPG|new|við Klingurstjørn 48|Argir|185|401|3|2|2024|6395000|||við tilmelding týsdagin 17. november
+2036|Sudurstreymoy/Argir/Vid_Klingurstjorn_48/01.JPG|new|við Klingurstjørn 48|Argir|185|401|3|2|2024|6395000|||
 2035|Sudurstreymoy/Torshavn/Granagota_24/01.JPG|new|Granagøta 24|Tórshavn|216|390|3|2|1984|4900000|||
 2019|Sandoy-og-Skuvoy/Heimasandsvegur_80_Sandur/01.JPG||Heimasandsvegur 80|Sandur|256|489|4|3|1956|2600000|||
 2024|Sudurstreymoy/Torshavn/Flatnagerdi_23_Torshavn/01.JPG||Flatnagerði 23|Tórshavn|226|500|5|2|2000|4995000|||
@@ -15,7 +16,6 @@
 2015|Vagar/i_geilini_6_sorvagur/01.jpg|expired|í Geilini 6|Sørvágur|177|728|3|3|1928|1900000|1400000||
 2032|Eysturoy/Gamlivegur_21_Oyndarfjordur/01.JPG|sold|Gamlivegur 21|Oyndarfjørður|159|194|3|3|1930|1400000|||
 2030|Eysturoy/Hoganesvegur_25_Toftir/01.JPEG||Høganesvegur 25|Toftir|313|845|5|3|1977|3495000|||
-2027|Suduroy/Toftavegur_101_Vagur/01.JPG||Toftavegur 101|Vágur|264|438|6|2|0|1695000|||
 2025|Eysturoy/Matr_nr_82_Selatrad/01.JPG||Matr.nr. 82 Selatrað|Selatrað|0|0|0|0|0|700000|||
 2021|Nordoyggjar/matr_nr_51_69_89_96a_Kunoy/01.JPEG||Matr.nr. 69 (festibræv), 89, 96a & 51|Kunoy|0|0|0|0|0|895000|||
 2022|Sudurstreymoy/Torshavn/Brattabrekka_16_torshavn/01.JPG||Brattabrekka 16|Tórshavn|173|451|6|3|1950|6895000|||
@@ -50,4 +50,3 @@
 2034|Sudurstreymoy/Torshavn/ryskigota_41/01.JPG|sold|Ryskigøta 41|Tórshavn|286|403|5|2|2025|8700000|||
 2026|Suduroy/Ovari_vegur_12_Tvoroyri/01.png|sold|Ovari Vegur 12|Tvøroyri|219|565|5|2|1968|1795000|||
 2023|Vagar/Tungureynsgota_2_Midvagur/1.JPG|sold|Tungureynsgøta 2|Miðvágur|192|224|3|3|1940|1900000|||
-1988|Eysturoy/Skalavegur_281_Skala/01.JPG|sold|Skálavegur 281|Skála|178|865|2|3|1990|2600000|||

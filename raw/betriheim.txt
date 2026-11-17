@@ -1,10 +1,10 @@
-gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|bid|Gerðisvegur 4|220 Skálavík|1500000|1800000|1981|126|1315|3|1|
+matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg|bid|Matr. 169i|520 Leirvík|995000|700000|2010|64|32||2|
+gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|bid|Gerðisvegur 4|220 Skálavík|1500000|2000000|1981|126|1315|3|1|
 stangatroed-17-klaksvik|plhf0hxs/1.jpg?width=400&height=233&rmode=max&quality=50&t=38&s=Kuwqb_6iaMEIZko2OOZh13bLjj0|new|Stangatrøð 17|700 Klaksvík|3795000|||||||Opið hús 18. november við tilmelding
-nordurstiggjur-4-argir|41kplgcf/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=N5Jn1rVK--UCGhFhrxMWGNmPkVM|new|Norðurstíggjur 4|160 Argir|4995000|||||||Opið hús 17. november við tilmelding
+nordurstiggjur-4-argir|41kplgcf/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=N5Jn1rVK--UCGhFhrxMWGNmPkVM|new|Norðurstíggjur 4|160 Argir|4995000||1979|289|548|5|3|
 skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c|new|Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
 glyvursvegur-33-og-matr-137-innan-glyvur|12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0|bid|Glyvursvegur 33 og matr. 137|494 Innan Glyvur|2725000|2100000|1960|212|8240|4|3|
 bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o|new|Bakkavegur 4|350 Vestmanna|2395000||1924|344|584|4|3|
-matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg||Matr. 169i|520 Leirvík|995000||2010|64|32||2|
 purkugerdi-4-torshavn|c4hj5x0l/1.jpg?width=400&height=233&rmode=max&quality=50&t=87&s=Mx-w6RKY-sDXRQmyJNCXBdgQ1pE|expired|Purkugerði 4|100 Tórshavn|5995000|5400000|1985|259|500|5|2|
 maritugoeta-11-hoyvik|poebh0aw/1.jpg?width=400&height=233&rmode=max&quality=50&t=45&s=BBzYZeEZ8Ke2Jc1GaHWXZXxbsuM||Maritugøta 11|188 Hoyvík|4850000||2003|127|137|3|2|
 javnagoeta-11-torshavn|3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk||Javnagøta 11|100 Tórshavn|7495000||2017|214|500|3|1|
@@ -40,4 +40,3 @@ maritugoeta-45-hoyvik|42pjmedp/1.jpg?width=400&height=233&rmode=max&quality=50&t
 a-eystaru-hellu-24-kvivik|vawlh23j/1.jpg?width=400&height=233&rmode=max&quality=50&t=56&s=eFeB7iFfuGegHugdyMB8Q_J59p8|sold|Á Eystaru Hellu 24|340 Kvívík|2995000||1974|211|855|5|2|
 matr-nr-260a-260f-og-260n-vestmanna|gxqorejp/1.jpg?width=400&height=233&rmode=max&quality=50&t=10&s=kix0HtQWBf8bCH5LPdLg6gGSkSU|sold|Matr. nr. 260a, 260f og 260n|350 Vestmanna|345000||||4861|||
 famjinsvegur-41-famjin|f4snj4hb/1.jpg?width=400&height=233&rmode=max&quality=50&t=39&s=sia5qSmARd79DyzgD1R7w43wpgU|sold|Fámjinsvegur 41|870 Fámjin|395000||1906|157|651|4|3|
-steigarbrekka-14-sandavagur|xjfibkfz/1.jpg?width=400&height=233&rmode=max&quality=50&t=20&s=DfUQ0gG8SkBZXlbRACoexD8hKYw||Steigarbrekka 14|360 Sandavágur|1700000||1926|120|179|1|3|
