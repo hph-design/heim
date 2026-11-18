@@ -1,20 +1,21 @@
+Suðuroy|Sethús|2026/11/a01-800x450.jpg|lopransvegur-23/|Uml. 1925|Lopransvegur 23|Lopra|4|485|148|0|0||375.000|400.000|1|20/11 kl. 16:00|0|
+Streymoy norð|Jørð, Sethús|2026/06/a01-3-800x450.jpg|leynarvegur-24/|1930|Leynarvegur 24|Leynar|3 / 4|34.600|155|0|0||6.000.000|5.000.000|1|25/11 kl. 16:00|0|
 Streymoy suður|Sethús|2026/10/a-1-5-800x450.jpg|haraldstrod-10-torshavn/|1970|Haraldstrøð 10|Tórshavn|4|400|228|0|0||5.995.000|5.600.000|1|19/11 kl. 11:00|0|
 Streymoy suður|Íbúð|2026/11/01-800x431.jpg|landavegur-94a-3-13/|2021|Landavegur 94A 3.13|Tórshavn|2||66|1|0||4.495.000||0||0|
-Suðuroy|Sethús|2026/11/a01-800x450.jpg|lopransvegur-23/|Uml. 1925|Lopransvegur 23|Lopra|4|485|148|1|0||375.000||0||0|
+Streymoy suður|Sethús|2026/10/01-2-800x450.jpg|vid-myllutjorn-22/|2014|við Myllutjørn 22|Hoyvík|4|213|110|0|0||4.995.000||0||0|
 Streymoy norð|Sethús|2026/11/a-1-800x450.jpg|heygatun-5/|1750 (2021-2024)|Heygatún 5|Vestmanna|2|111|117|1|0||2.295.000||0||0|
-Streymoy suður|Íbúð|2026/09/01-800x450.jpg|undir-kongavarda-23/|2009|undir Kongavarða 23 1hm|Argir|1 (2)||83|0|0||3.795.000||0||0|1
-Streymoy suður|Sethús|2026/10/01-800x450.jpg|millum-gilja-133/|1988|Millum Gilja 133|Hoyvík|4|500|212|0|0||5.495.000||0||0|1
+Streymoy suður|Íbúð|2026/09/01-800x450.jpg|undir-kongavarda-23/|2009|undir Kongavarða 23 1hm|Argir|1 (2)||83|0|0||3.795.000||0||0|
+Streymoy suður|Sethús|2026/10/01-800x450.jpg|millum-gilja-133/|1988|Millum Gilja 133|Hoyvík|4|500|212|0|0||5.495.000||0||0|
 Sandoy|Sethús|2026/10/a-1-6-800x450.jpg|gardavegur-26/|1906|Garðavegur 26|Skopun|3|204|144|1|0||995.000||0||0|
 Streymoy suður|Tvíhús|2026/10/e-800x450.jpg|niels-finsens-gota-47-torshavn/|1914|Niels Finsens gøta 47|Tórshavn|3|86|120|1|0||5.000.000||0||0|
-Streymoy norð|Vinnubygningur|2026/10/a01-5-800x450.jpg|bakkavegur-41/|Uml. 1900|Bakkavegur 41|Vestmanna||277|Uml. 400|1|0||4.500.000||0||0|
-Streymoy suður|Íbúð|2026/10/a01-4-800x450.jpg|ingibjargargota-4a/|2021|Ingibjargargøta 4A|Hoyvík|3|439|92|1|0||4.200.000||0||0|
-Streymoy suður|Sethús|2026/10/dji_fly_20261016_122536_931_1792150144806_photo-800x450.jpg|argjabodagota-24-argir/|1968|Argjaboðagøta 24|Argir|3|237|220|1|0||4.195.000||0||0|
-Suðuroy|Sethús|2025/11/a01-2-800x450.jpg|sjogota-24/|1968|Sjógøta 24|Tvøroyri|5|242|270|0|0||1.800.000||0||0|1
-Streymoy suður|Íbúð|2026/10/a-1-4-800x450.jpg|ingibjargargota-6a/|2018|Ingibjargargøta 6A|Hoyvík|2||83|1|0||4.100.000||0||0|
-Eysturoy|Íbúð|2026/10/01-3-800x450.jpg|leitisvegur-70d-saltangara/|2026|Leitisvegur 70D|Saltangará|2||89|1|0||3.595.000||0||0|
+Streymoy norð|Vinnubygningur|2026/10/a01-5-800x450.jpg|bakkavegur-41/|Uml. 1900|Bakkavegur 41|Vestmanna||277|Uml. 400|0|0||4.500.000||0||0|
+Streymoy suður|Íbúð|2026/10/a01-4-800x450.jpg|ingibjargargota-4a/|2021|Ingibjargargøta 4A|Hoyvík|3|439|92|0|0||4.200.000||0||0|
+Streymoy suður|Sethús|2026/10/dji_fly_20261016_122536_931_1792150144806_photo-800x450.jpg|argjabodagota-24-argir/|1968|Argjaboðagøta 24|Argir|3|237|220|0|0||4.195.000||0||0|
+Suðuroy|Sethús|2025/11/a01-2-800x450.jpg|sjogota-24/|1968|Sjógøta 24|Tvøroyri|5|242|270|0|0||1.800.000||0||0|
+Streymoy suður|Íbúð|2026/10/a-1-4-800x450.jpg|ingibjargargota-6a/|2018|Ingibjargargøta 6A|Hoyvík|2||83|0|0||4.100.000||0||0|
+Eysturoy|Íbúð|2026/10/01-3-800x450.jpg|leitisvegur-70d-saltangara/|2026|Leitisvegur 70D|Saltangará|2||89|0|0||3.595.000||0||0|
 Streymoy suður|Sethús|2025/08/01-3-800x450.jpg|eystan-heyg-17-2/|1970|Eystan Heyg 17|Tórshavn|5|344|257|0|0||5.950.000||0||0|
 Streymoy suður|Sethús|2026/10/a01-1-800x450.jpg|mannbrekka-8/|1975|Mannbrekka|Hoyvík|9|1.012|339|0|0||8.000.000||0||0|
-Streymoy suður|Sethús|2026/10/01-2-800x450.jpg|vid-myllutjorn-22/|2014|við Myllutjørn 22|Hoyvík|4|213|110|0|0||4.995.000||0||0|
 Streymoy suður|Sethús|2026/04/01a-4-800x573.jpg|grasteinsgota-4/|1946-47|Grásteinsgøta 4|Tórshavn|7|835|192|0|0||4.495.000|3.900.000|0|04/11 kl. 12:00|1|
 Streymoy norð|Frítíðarogn, Jørð|2026/10/a01-2-800x450.jpg|streymnesvegur/||Streymnesvegur|Streymnes||10.520||0|0||600.000||0||0|
 Suðuroy|Sethús|2026/10/a01-800x450.jpg|misavegur-2/|2000 / 2010 / 2025|Misávegur 2|Vágur|4|409|216|0|0||2.200.000||0||0|
@@ -27,7 +28,6 @@ Suðuroy|Sethús|2026/06/a-1-4-800x450.jpg|i-sydrutoftum-46/|1880`inum|Í Syðru
 Suðuroy|Frítíðarogn, Sethús|2026/07/a01-2-800x450.jpg|hvammavegur-20/|1960-80|Hvammavegur 20|Trongisvágur|4|1.733|200|0|0||2.475.000||0||0|
 Vágar|Samanbygd hús|2026/07/01-5-800x450.jpg|a-holmanum-3/|1950`ini|á Hólmanum 3|Miðvágur|4|289|uml. 120|0|0||1.695.000||0||0|
 Norðoyggjar|Sethús|2026/06/01-11-800x450.jpg|millum-gardarnar-6/|2022|Millum Garðarnar 6|Kunoy|2|583|100|0|0||3.995.000||0||0|
-Streymoy norð|Jørð, Sethús|2026/06/a01-3-800x450.jpg|leynarvegur-24/|1930|Leynarvegur 24|Leynar|3 / 4|34.600|155|0|0||6.000.000||0||0|
 Streymoy suður|Grundstykki|2026/06/01-6-800x450.jpg|norduri-a-heyggi-2a/||Norðuri á Heyggi 2A|Velbastaður||568||0|0||695.000||0||0|
 Streymoy suður|Grundstykki|2026/03/01-3-800x450.jpg|undir-graasteini-7b/||undir Gráasteini 7B|Tórshavn||499||0|0||2.900.000||0||0|
 Suðuroy|Jørð|2026/02/a01-1-800x430.jpg|matr-nr-62a/||Matr.nr. 62a Froðba|Froðba||09 gl. 02 sk.|24.048|0|0||1.000.000||0||0|
