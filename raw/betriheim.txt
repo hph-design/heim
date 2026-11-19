@@ -1,10 +1,13 @@
-glyvursvegur-33-og-matr-137-innan-glyvur|12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0|bid|Glyvursvegur 33 og matr. 137|494 Innan Glyvur|2725000|2300000|1960|212|8240|4|3|
-matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg|bid|Matr. 169i|520 Leirvík|995000|700000|2010|64|32||2|
-gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|bid|Gerðisvegur 4|220 Skálavík|1500000|2000000|1981|126|1315|3|1|
-stangatroed-17-klaksvik|plhf0hxs/1.jpg?width=400&height=233&rmode=max&quality=50&t=38&s=Kuwqb_6iaMEIZko2OOZh13bLjj0|new|Stangatrøð 17|700 Klaksvík|3795000||1964|274|528|5|3|
+glyvursvegur-33-og-matr-137-innan-glyvur|12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0|bid|Glyvursvegur 33 og matr. 137|494 Innan Glyvur|2725000|2800000|1960|212|8240|4|3|
+millum-hjalla-46a-klaksvik|u34arzyr/1.jpg?width=400&height=233&rmode=max&quality=50&t=13&s=ghrdufKH1tQEdak7YZqBZG8lW-0|new|Millum Hjalla 46a|700 Klaksvík|1695000||2027|85|260|2|1|
+matr-169i-leirvik|dfqal1qs/1.jpg?width=400&height=233&rmode=max&quality=50&t=17&s=J0M88CeB0-VkXxskUbNVM1lwQJg|bid|Matr. 169i|520 Leirvík|995000|800000|2010|64|32||2|
+matr-nr-215-frodba|ztqfe2hu/matr-215.jpg?width=400&height=233&rmode=max&quality=50&t=12&s=_E_SrOhfCK0ayvUo50pJS2D7sGc|bid|Matr. 215|800 Tvøroyri|300000|200000|||5493|||
+matr-93-og-155b-svinoy|rdhhwt30/svinoy.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=517&s=Z5dvbI1rg0dFpFXeJ5ER7gsRsKo|new|Norðuri í Mýrum|765 Svínoy|195000||||2300|||
+gerdisvegur-4-skalavik|oceagkn3/1.jpg?width=400&height=233&rmode=max&quality=50&s=DtF_bEZ-bEh9MOLWPcFuMTPQsRE|sold|Gerðisvegur 4|220 Skálavík|1500000||1981|126|1315|3|1|
+stangatroed-17-klaksvik|plhf0hxs/1.jpg?width=400&height=233&rmode=max&quality=50&t=38&s=Kuwqb_6iaMEIZko2OOZh13bLjj0|bid|Stangatrøð 17|700 Klaksvík|3795000|3800000|1964|274|528|5|3|
 nordurstiggjur-4-argir|41kplgcf/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=N5Jn1rVK--UCGhFhrxMWGNmPkVM|new|Norðurstíggjur 4|160 Argir|4995000||1979|289|548|5|3|
 skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c|new|Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
-bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o|new|Bakkavegur 4|350 Vestmanna|2395000||1924|344|584|4|3|
+bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o||Bakkavegur 4|350 Vestmanna|2395000||1924|344|584|4|3|
 purkugerdi-4-torshavn|c4hj5x0l/1.jpg?width=400&height=233&rmode=max&quality=50&t=87&s=Mx-w6RKY-sDXRQmyJNCXBdgQ1pE|expired|Purkugerði 4|100 Tórshavn|5995000|5400000|1985|259|500|5|2|
 maritugoeta-11-hoyvik|poebh0aw/1.jpg?width=400&height=233&rmode=max&quality=50&t=45&s=BBzYZeEZ8Ke2Jc1GaHWXZXxbsuM||Maritugøta 11|188 Hoyvík|4850000||2003|127|137|3|2|
 javnagoeta-11-torshavn|3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk||Javnagøta 11|100 Tórshavn|7495000||2017|214|500|3|1|
@@ -14,7 +17,6 @@ vid-leitisstein-3-nordragoeta-1|z3hp35jy/framman.png?width=400&height=233&rmode=
 matr-nr-121-trongisvagur|entowocz/matr-121.jpg?width=400&height=233&rmode=max&quality=50&t=14&s=_cllg-KLl3gnVwFhEjydJrFZtU0||Matr. 121|826 Trongisvágur|495000||||11320|||
 matr-nr-699-tvoeroyri|adyphdmf/matr-699.jpg?width=400&height=233&rmode=max&quality=50&t=13&s=2N1sLqo0p7nMf0Mc6T7XV-mqwCw||Matr. 699|800 Tvøroyri|230000||||6410|||
 matr-nr-216b-og-216c-tvoeroyri|u5hd2w5n/matr-216b-og-216c.jpg?width=400&height=233&rmode=max&quality=50&s=tnC-lwG3umKfVvUQDRhqeMUM-b0||Matr. 216b og 216c|800 Tvøroyri|175900||||1759|||
-matr-nr-215-frodba|ztqfe2hu/matr-215.jpg?width=400&height=233&rmode=max&quality=50&t=12&s=_E_SrOhfCK0ayvUo50pJS2D7sGc||Matr. 215|800 Tvøroyri|300000||||5493|||
 deildarvegur-7a-mikladalur|ub4bmvra/1.jpg?width=400&height=233&rmode=max&quality=50&t=26&s=DKZDrMDIakoRzNdLqnjd8zMdQFA||Deildarvegur 7A|797 Mikladalur|1995000||2026|80|315|||
 matr-nr-723-tvoeroyri|tppjc03h/1.jpg?width=400&height=233&rmode=max&quality=50&t=12&s=_9Wz2HZm_nf_xhByj6QsnYuKvLA||Matr. nr. 723|800 Tvøroyri|165000||||3107|||
 matr-nr-237b-elduvik|3f5nj0vu/1.jpg?width=400&height=233&rmode=max&quality=50&t=199&s=tPZruVFXZtHopw2OnZSmFd-a8To||Matr. nr. 237b|478 Elduvík|150000||||16256|||
