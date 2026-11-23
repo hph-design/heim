@@ -1,7 +1,7 @@
 {
  "meklarin": {
   "ok": true,
-  "count": 53
+  "count": 55
  },
  "betriheim": {
   "ok": true,
@@ -9,7 +9,7 @@
  },
  "skyn": {
   "ok": true,
-  "count": 54
+  "count": 53
  },
  "ogn": {
   "ok": true,
@@ -17,6 +17,6 @@
  },
  "skift": {
   "ok": true,
-  "count": 15
+  "count": 18
  }
 }
