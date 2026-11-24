@@ -5,11 +5,11 @@
  },
  "betriheim": {
   "ok": true,
-  "count": 42
+  "count": 41
  },
  "skyn": {
   "ok": true,
-  "count": 53
+  "count": 52
  },
  "ogn": {
   "ok": true,
@@ -17,6 +17,6 @@
  },
  "skift": {
   "ok": true,
-  "count": 18
+  "count": 17
  }
 }
