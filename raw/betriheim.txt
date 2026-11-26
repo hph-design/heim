@@ -1,13 +1,14 @@
+skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c|sold|Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
+javnagoeta-11-torshavn|3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk|sold|Javnagøta 11|100 Tórshavn|7495000||2017|214|500|3|1|
+gardatun-5-vestmanna|0ytd2wmi/1.jpg?width=400&height=233&rmode=max&quality=50&t=23&s=7rSfVP1_in0s0L3WPqyilx4L04U|bid|Garðatún 5|350 Vestmanna|1200000|1000000|2004|129|185|2|3|
+glyvravegur-27-glyvrar|pdzpj2ik/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=dDLdcin4cVzYnSHknSksM40h1sI|new|Glyvravegur 27|625 Glyvrar|2695000|||||||Opið hús 30. november við tilmelding
 matr-nr-215-frodba|ztqfe2hu/matr-215.jpg?width=400&height=233&rmode=max&quality=50&t=12&s=_E_SrOhfCK0ayvUo50pJS2D7sGc|bid|Matr. 215|800 Tvøroyri|300000|300000|||5493|||
 krokavegur-11-valur|vz5jseu2/1.jpg?width=400&height=233&rmode=max&quality=50&s=G_7Xp2vp2LV1QvFpr1CygducBBs|new|Krókavegur 11|358 Válur|2495000|||||||Opið hús 30. november við tilmelding
 matr-93-og-155b-svinoy|rdhhwt30/svinoy.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=517&s=Z5dvbI1rg0dFpFXeJ5ER7gsRsKo|bid|Norðuri í Mýrum|765 Svínoy|195000|350000|||2300|||
 ennivegur-74-fuglafjoerdur|o03mdi1z/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=LWu2wxE2v09vZgNZQs843iJomUs|new|Ennivegur 74|530 Fuglafjørður|1995000|||||||Opið hús 30. november við tilmelding
-gardatun-5-vestmanna|0ytd2wmi/1.jpg?width=400&height=233&rmode=max&quality=50&t=23&s=7rSfVP1_in0s0L3WPqyilx4L04U|new|Garðatún 5|350 Vestmanna|1200000||2004|129|185|2|3|
 kirkjugoeta-1-vidareidi|kihbcnty/6.jpg?width=400&height=233&rmode=max&quality=50&t=43&s=QkcFhluP1PRUQQYxvQfcXhf1HTE|new|Kirkjugøta 1|750 Viðareiði|2650000||1967|246|825|4|2|
-nordurstiggjur-4-argir|41kplgcf/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=N5Jn1rVK--UCGhFhrxMWGNmPkVM|new|Norðurstíggjur 4|160 Argir|4995000||1979|289|548|5|3|
-skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c||Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
+nordurstiggjur-4-argir|41kplgcf/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=N5Jn1rVK--UCGhFhrxMWGNmPkVM||Norðurstíggjur 4|160 Argir|4995000||1979|289|548|5|3|
 bakkavegur-4-vestmanna-1|2hndkwd0/1.jpg?width=400&height=233&rmode=max&quality=50&t=3028&s=H6gygcEGZGZR7l2lrGd3dwUS76o||Bakkavegur 4|350 Vestmanna|2395000||1924|344|584|4|3|
-javnagoeta-11-torshavn|3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk||Javnagøta 11|100 Tórshavn|7495000||2017|214|500|3|1|
 groenlandsvegur-25-torshavn|aivh2too/1.jpg?width=400&height=233&rmode=max&quality=50&t=45&s=fGJP2n2_VVn15f5WGyNOV5FfdP0||Grønlandsvegur 25|100 Tórshavn|5295000||1964|198|391|6|3|
 vid-myllutjoern-32-hoyvik|msafuon4/16.jpg?width=400&height=233&rmode=max&quality=50&t=1802082&s=ZalixIk-SEbFPgZeydgB1NCqOQg||við Myllutjørn 32|188 Hoyvík|5195000||2018|109|213|4|2|
 vid-leitisstein-3-nordragoeta-1|z3hp35jy/framman.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=824&s=w9q9H6X80Yp-pO1ALzfWbBsqKdk||Við Leitisstein 3|512 Norðragøta|3995000||2026|292||1|1|
@@ -38,5 +39,3 @@ vardagoeta-73-torshavn|us2lte0y/1.jpg?width=400&height=233&rmode=max&quality=50&
 trondargoeta-8-nordragoeta|ebxbpsxm/1.jpg?width=400&height=233&rmode=max&quality=50&s=-YM2ztWzndEGm8QPnQshOmIav74|sold|Tróndargøta 8|512 Norðragøta|1850000||1905|156|616|2|3|
 vipuvegur-6-tvoeroyri|cj3pbbuf/1.jpg?width=400&height=233&rmode=max&quality=50&t=36&s=XU-iH8kSGzCO0E0c3ZOZX_WUbf4|sold|Vípuvegur 6|800 Tvøroyri|2495000||1966|221|1441|5|2|
 sornhusvegur-9-tvoeroyri|w4kbjkmq/1.jpg?width=400&height=233&rmode=max&quality=50&t=30&s=8e-ClNkjtfHgJ36mfAOVyRaG3Nk|sold|Sornhúsvegur 9|800 Tvøroyri|1495000||1920|122|305|3|2|
-leitisvegur-21-glyvrar|f1ahbexf/1-dji_fly_20260914_103112_429_1789379125686_photo_optimized.jpg?width=400&height=233&rmode=max&quality=50&t=233&s=hhCq0m4um4OVmKOF7MqbrWil2TU|sold|Leitisvegur 21|625 Glyvrar|3595000||1972|258|909|5|2|
-dyrindalsgoeta-20-hoyvik|aqimiiih/01-dyrindalsgoeta-uti-framman.jpg?width=400&height=233&rmode=max&quality=50&t=118&s=WiLC4rM_95Z8WqutEiSA2NtKwG8|sold|Dýrindalsgøta 20|188 Hoyvík|5395000||2012|123|167|3|2|
