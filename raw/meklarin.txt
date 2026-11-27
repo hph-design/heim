@@ -1,9 +1,10 @@
+||2026/11/a-1-2-800x591.jpg|ovara-gerdisbrekka-11-sorvagur/|2004|Ovara Gerðisbrekka 11|Sørvágur|7|643|307|1|0|3. des. kl. 14:30|3.475.000||0||0|
+Eysturoy|Íbúð|2026/11/c-2-1-800x450.jpg|eyrgota-40-ibud-nr-7/|2025-2026|Eyrgøta 40|Strendur|2||94|0|1||2.895.000||1||0|
 Streymoy suður|Sethús|2026/10/01-2-800x450.jpg|vid-myllutjorn-22/|2014|við Myllutjørn 22|Hoyvík|4|213|110|0|0||4.695.000||0||0|1
-Streymoy suður|Sethús|2026/11/a01-2-800x450.jpg|tradavegur-9/|1960|Traðavegur 9|Tórshavn|6|400|220|1|0|27. nov. kl. 15:00|6.500.000||0||0|
+Streymoy suður|Sethús|2026/11/a01-2-800x450.jpg|tradavegur-9/|1960|Traðavegur 9|Tórshavn|6|400|220|1|0||6.500.000||0||0|
 Streymoy suður|Íbúð|2026/11/01-1-800x450.jpg|karlamagnusarbreyt-29-3-2/|2020|Karlamagnusarbreyt 29 3.2|Hoyvík|2||91|1|0||4.200.000||0||0|
 Streymoy suður|Sethús|2026/11/02-1-800x450.jpg|j-c-svabos-gota-52/|2026|J.C. Svabos gøta 52|Tórshavn|5|250|150|1|0||4.500.000||0||0|
 Streymoy suður|Íbúð|2026/11/01-800x431.jpg|landavegur-94a-3-13/|2021|Landavegur 94A 3.13|Tórshavn|2||66|1|0||4.495.000||0||0|
-Eysturoy|Íbúð|2026/11/c-2-1-800x450.jpg|eyrgota-40-ibud-nr-7/|2025-2026|Eyrgøta 40|Strendur|2||94|0|0||2.895.000|3.100.000|1|27/11 kl. 12:00|0|
 Streymoy norð|Sethús|2026/11/a-1-800x450.jpg|heygatun-5/|1750 (2021-2024)|Heygatún 5|Vestmanna|2|111|117|1|0||2.295.000||0||0|
 Streymoy suður|Tvíhús|2026/10/e-800x450.jpg|niels-finsens-gota-47-torshavn/|1914|Niels Finsens gøta 47|Tórshavn|3|86|120|1|0||5.000.000||0||0|
 Eysturoy|Grundstykki|2026/11/a01-1-800x450.jpg|innandalsvegur-61/|2024|Innandalsvegur 61|Fuglafjørður||712|(380)|1|0||1.500.000||0||0|
@@ -50,5 +51,3 @@ Streymoy suður|Grundstykki|2026/03/IMG_1389-800x450.jpeg|i-lagni-10/||Í Lágni
 Streymoy suður|Sethús|2026/06/a-1-3-800x450.jpg|birnugota-31/|1977|Birnugøta 31|Tórshavn|7/8|565|257|0|1||5.495.000||0||0|
 Eysturoy|Neyst|2026/08/a01-4-800x450.jpg|neyst-matr-nr-487/|Uml. 1940||Skála||Uml. 29|Uml. 55|0|1||200.000||0||0|
 Norðoyggjar|Íbúð, Íbúðarbygningur, Sethús, Vinnubygningur|2026/07/a01-800x450.jpg|skulavegur-20/|1930'ini / 1980'ini|Skúlavegur 20|Klaksvík|6|266|247|0|1||4.750.000||0||0|
-Eysturoy|Íbúð|2026/09/01-1-800x450.jpg|leitisvegur-70e/|2026|Leitisvegur 70E|Saltangará|2||84|0|1||3.395.000||0||0|
-Streymoy norð|Sethús|2026/09/a-1-800x450.jpg|i-lidini-7/|1957|í Líðini 7|Kollafjørður|3|316|188|0|1||2.890.000||1||0|

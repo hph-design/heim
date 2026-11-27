@@ -1,10 +1,7 @@
-skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c|sold|Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
-javnagoeta-11-torshavn|3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk|sold|Javnagøta 11|100 Tórshavn|7495000||2017|214|500|3|1|
+matr-nr-215-frodba|ztqfe2hu/matr-215.jpg?width=400&height=233&rmode=max&quality=50&t=12&s=_E_SrOhfCK0ayvUo50pJS2D7sGc|bid|Matr. 215|800 Tvøroyri|300000|350000|||5493|||
 gardatun-5-vestmanna|0ytd2wmi/1.jpg?width=400&height=233&rmode=max&quality=50&t=23&s=7rSfVP1_in0s0L3WPqyilx4L04U|bid|Garðatún 5|350 Vestmanna|1200000|1000000|2004|129|185|2|3|
 glyvravegur-27-glyvrar|pdzpj2ik/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=dDLdcin4cVzYnSHknSksM40h1sI|new|Glyvravegur 27|625 Glyvrar|2695000|||||||Opið hús 30. november við tilmelding
-matr-nr-215-frodba|ztqfe2hu/matr-215.jpg?width=400&height=233&rmode=max&quality=50&t=12&s=_E_SrOhfCK0ayvUo50pJS2D7sGc|bid|Matr. 215|800 Tvøroyri|300000|300000|||5493|||
-krokavegur-11-valur|vz5jseu2/1.jpg?width=400&height=233&rmode=max&quality=50&s=G_7Xp2vp2LV1QvFpr1CygducBBs|new|Krókavegur 11|358 Válur|2495000|||||||Opið hús 30. november við tilmelding
-matr-93-og-155b-svinoy|rdhhwt30/svinoy.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=517&s=Z5dvbI1rg0dFpFXeJ5ER7gsRsKo|bid|Norðuri í Mýrum|765 Svínoy|195000|350000|||2300|||
+krokavegur-11-valur|vz5jseu2/1.jpg?width=400&height=233&rmode=max&quality=50&s=G_7Xp2vp2LV1QvFpr1CygducBBs|new|Krókavegur 11|358 Válur|2495000|||||||Opið hús 2. desember við tilmelding
 ennivegur-74-fuglafjoerdur|o03mdi1z/1.jpg?width=400&height=233&rmode=max&quality=50&t=35&s=LWu2wxE2v09vZgNZQs843iJomUs|new|Ennivegur 74|530 Fuglafjørður|1995000|||||||Opið hús 30. november við tilmelding
 kirkjugoeta-1-vidareidi|kihbcnty/6.jpg?width=400&height=233&rmode=max&quality=50&t=43&s=QkcFhluP1PRUQQYxvQfcXhf1HTE|new|Kirkjugøta 1|750 Viðareiði|2650000||1967|246|825|4|2|
 nordurstiggjur-4-argir|41kplgcf/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=N5Jn1rVK--UCGhFhrxMWGNmPkVM||Norðurstíggjur 4|160 Argir|4995000||1979|289|548|5|3|
@@ -21,6 +18,9 @@ lynggoeta-14-trongisvagur|2mwaqqbl/2.jpg?width=400&height=233&rmode=max&quality=
 i-heygnum-138-trongisvagur|jcvej0wx/01.jpg?width=400&height=233&rmode=max&quality=50&s=cTtEv51kCxfjv7NGoynK_81hj-E||í Heygnum 138|826 Trongisvágur|250000||||750|||
 matr-nr-111a-soervagur|1b1nazkh/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=5722&s=8Xpb0-MFyYE5xlc0a_K1T1UJDtc||Matr. nr. 111a Sørvágur|380 Sørvágur|395000||||7866|||
 lokkagardsvegur-5-sumba|oylbrw1w/a-1.jpg?width=400&height=233&rmode=max&quality=50&t=58&s=tF5vd8Ne-JlmZs280R4EIPhL23k||Lokkargarðsvegur 5|970 Sumba|595000||1950|130|330|3|2|
+matr-93-og-155b-svinoy|rdhhwt30/svinoy.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=517&s=Z5dvbI1rg0dFpFXeJ5ER7gsRsKo|sold|Norðuri í Mýrum|765 Svínoy|195000||||2300|||
+skulavegur-12-lon-1-ibud-02-strendur|31foymxx/0.png?width=400&height=233&rmode=max&bgcolor=fff&format=jpg&quality=50&t=38&s=jwd4X_7GsHLEDT400-oWDKGoU9c|sold|Síðsta íbúðin á Skúlavegi 12, Lon 1, íbúð 0.2|490 Strendur|2995000||2026|110||3|1|
+javnagoeta-11-torshavn|3nrlg0ah/1.jpg?width=400&height=233&rmode=max&quality=50&t=66&s=u3de62ku3vMhWvrseOoevptJkJk|sold|Javnagøta 11|100 Tórshavn|7495000||2017|214|500|3|1|
 matr-nr-216b-og-216c-tvoeroyri|u5hd2w5n/matr-216b-og-216c.jpg?width=400&height=233&rmode=max&quality=50&s=tnC-lwG3umKfVvUQDRhqeMUM-b0|sold|Matr. 216b og 216c|800 Tvøroyri|175900||||1759|||
 glyvursvegur-33-og-matr-137-innan-glyvur|12fgd5wg/1.jpg?width=400&height=233&rmode=max&quality=50&t=31&s=mfwK9-rHwu2F2Tg1Wjl2e4Y0tF0|sold|Glyvursvegur 33 og matr. 137|494 Innan Glyvur|2725000||1960|212|8240|4|3|
 purkugerdi-4-torshavn|c4hj5x0l/1.jpg?width=400&height=233&rmode=max&quality=50&t=87&s=Mx-w6RKY-sDXRQmyJNCXBdgQ1pE|sold|Purkugerði 4|100 Tórshavn|5995000||1985|259|500|5|2|
